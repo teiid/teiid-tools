@@ -18,8 +18,8 @@ Build project (install archetypes):
 Tools
 ------
 
--connector-archetype
--translator-archetype
+-   connector-archetype
+-   translator-archetype
 
 
 
