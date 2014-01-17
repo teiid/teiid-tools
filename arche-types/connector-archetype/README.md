@@ -45,12 +45,12 @@ mvn archetype:generate                                  \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=connector-archetype          \
   -DarchetypeVersion=8.6.0               \
-  -DgroupId=   				\
+  -DgroupId=${groupId}   				\
   -DartifactId=connector-${connector-name}	\
   -Dpackage=org.teiid.resource.adapter.${connector-name}    \
   -Dversion=8.7.0.Alpha1-SNAPSHOT    \
   -Dconnector-name=${connector-name}   \
-  -Dvendor-name=MyVendor
+  -Dvendor-name=${vendor-name}
 
 
 where:
