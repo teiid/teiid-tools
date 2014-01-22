@@ -3,18 +3,18 @@
  	<parent>
         <groupId>org.jboss.teiid</groupId>
         <artifactId>teiid-parent</artifactId>
-        <version>8.6.0.Final</version>    
+        <version>8.7.0.Alpha2-SNAPSHOT</version>    
 	</parent> 
     <modelVersion>4.0.0</modelVersion>
 	<groupId>org.jboss.teiid</groupId>
 	<artifactId>teiid-tools</artifactId>
 	<packaging>pom</packaging>
 	<name>Teiid Tools</name>
-	<version>8.6.0</version>
+	<version>8.7.0</version>
 	<description>Teiid tools to assist in development task.</description>
 	<properties>
 		<site.url>http://www.jboss.org/teiid</site.url>
-        <version.org.jboss.teiid>8.6.0.Final</version.org.jboss.teiid>
+        <version.org.jboss.teiid>8.7.0.Alpha2-SNAPSHOT</version.org.jboss.teiid>
 	</properties>
 	<scm>
         <connection>scm:git:git://github.com/teiid/teiid-tools.git</connection>
@@ -73,7 +73,22 @@
 			<timezone>-6</timezone>
 		</developer>
 	</developers>
-
+    <build>
+        <plugins>
+	  <!-- Specify the compiler options and settings -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.compiler.plugin}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<showDeprecation>false</showDeprecation>
+					<showWarnings>false</showWarnings>
+				</configuration>
+			</plugin>
+        </plugins>
+    </build>
 	<modules>
 		<module>arche-types</module>
   </modules>

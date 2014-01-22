@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"  name="translator-archetype">
   <requiredProperties>
     <requiredProperty key="translator-name" >
-      <defaultValue/>
-    </requiredProperty>  
+      <defaultValue>CustomTranslator</defaultValue>
+    </requiredProperty>    
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true" packaged="true">
@@ -12,6 +12,12 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>src/main/module</directory>
+      <includes>
+        <include>**/main/module.xml</include>
+      </includes>
+    </fileSet>    
     <fileSet filtered="false" packaged="true">
       <directory>src/main/resources</directory>
       <includes>
@@ -23,6 +29,12 @@
       <includes>
         <include>**/*.*</include>
       </includes>      
-    </fileSet>       
+    </fileSet>    
+    <fileSet filtered="true" packaged="false">
+      <directory>src/main/assembly</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>      
+    </fileSet>         
   </fileSets>
 </archetype-descriptor>

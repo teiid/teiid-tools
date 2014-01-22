@@ -61,7 +61,7 @@ where:
   -DgroupId		-  (user defined) group ID for the new connector project pom.xml
   -DartifactId		-  (user defined) artifact ID for the new connector project pom.xml
   -Dpackage		-  (user defined) the package structure where the java and resource files will be created
-  -Dversion		-  (user defined) the version for the new connector project pom.xml
+  -Dversion		-  (user defined) the Teiid version that the new connector project pom.xml will depend on
   -Dconnector-name	-  (user defined) the name (type) of the new connector project, used to create the java class names and rar
   -Dvendor-name		-  name of the Vendor for the data source, updates the rar
 

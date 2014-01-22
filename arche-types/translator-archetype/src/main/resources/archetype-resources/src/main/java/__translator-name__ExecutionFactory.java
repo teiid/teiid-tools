@@ -24,6 +24,8 @@ package ${package};
 
 import java.util.Arrays;
 
+import javax.resource.cci.ConnectionFactory;
+
 import org.teiid.core.types.DataTypeManager;
 import org.teiid.language.QueryExpression;
 import org.teiid.language.Select;
@@ -39,7 +41,7 @@ import org.teiid.translator.Translator;
 import org.teiid.translator.TranslatorException;
 
 @Translator(name="${translator-name}", description="${translator-name} custom translator")
-public class ${translator-name}ExecutionFactory extends ExecutionFactory<Object, Object> {
+public class ${translator-name}ExecutionFactory extends ExecutionFactory<ConnectionFactory, Object> {
 
 	
 	public ${translator-name}ExecutionFactory() {

@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>teiid-tools</artifactId>
 		<groupId>org.jboss.teiid</groupId>
-		<version>8.6.0</version>
+		<version>8.7.0</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>arche-types</artifactId>
@@ -16,7 +16,7 @@
 	
 	<dependencies>     
 	</dependencies>
-
+    
   <modules>
     <module>translator-archetype</module>
     <module>connector-archetype</module>

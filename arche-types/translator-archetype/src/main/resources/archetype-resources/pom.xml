@@ -40,5 +40,75 @@
               <scope>test</scope>
             </dependency>
       </dependencies>  
-  
+ 
+    <build>
+        <plugins>
+            <plugin>
+                <!--  The ant process is needed to convert the package name into a directory path
+                      and then replace the new dir path into the assembly descriptor module-dist.xml
+                -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.7</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.ant</groupId>
+                        <artifactId>ant</artifactId>
+                        <version>1.7.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.ant</groupId>
+                        <artifactId>ant-apache-regexp</artifactId>
+                        <version>1.8.4</version>
+                    </dependency>   
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>updateModule</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                            
+                                <property name="packagename" value="${package}"/>
+
+                                <loadresource property="path.name">
+                                  <string value="${packagename}" />
+                                  <filterchain>
+                                    <replaceregex pattern="\." replace="/" flags="g" />
+                                  </filterchain>
+                                </loadresource>
+
+                                <replace file="${basedir}/src/main/assembly/module-dist.xml" token="@@@" value="${path.name}"/>
+                                
+                                <echo message="Updated package to path ${path.name}" />
+                            
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/module-dist.xml</descriptor>
+                    </descriptors>
+                </configuration>
+
+                <executions>
+                  <execution>
+                    <id>create-assemblies</id>
+                    <phase>package</phase>
+                    <goals>
+                      <goal>single</goal>
+                    </goals>
+                  </execution>
+                </executions>
+            </plugin>
+         </plugins>
+  </build>
+   
 </project>
