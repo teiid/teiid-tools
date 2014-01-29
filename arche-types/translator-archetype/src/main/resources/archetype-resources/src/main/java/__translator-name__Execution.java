@@ -75,7 +75,7 @@ public class ${translator-name}Execution implements ResultSetExecution {
     @Override
     public void execute() throws TranslatorException {
         // Log our command
-        LogManager.logTrace(LogConstants.CTX_CONNECTOR, "${translator-name} executing command: " + command); //$NON-NLS-1$
+        LogManager.logDetail(LogConstants.CTX_CONNECTOR, ${translator-name}Plugin.UTIL.getString("execute_query", new Object[] { "${translator-name}", command })); //$NON-NLS-1$
     }    
 
 
@@ -103,11 +103,13 @@ public class ${translator-name}Execution implements ResultSetExecution {
 
     @Override
     public void close() {
-        // nothing to do
+        LogManager.logDetail(LogConstants.CTX_CONNECTOR, ${translator-name}Plugin.UTIL.getString("close_query")); //$NON-NLS-1$
+
+    
     }
 
     @Override
     public void cancel() throws TranslatorException {
-
+        LogManager.logDetail(LogConstants.CTX_CONNECTOR, ${translator-name}Plugin.UTIL.getString("cancel_query")); //$NON-NLS-1$
     }
 }
