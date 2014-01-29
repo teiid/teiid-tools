@@ -29,7 +29,7 @@ import org.teiid.core.BundleUtil;
 
 public class ${translator-name}Plugin { 
     public static final String PLUGIN_ID = "${package}" ; //$NON-NLS-1$
-	public static final BundleUtil Util = new BundleUtil(PLUGIN_ID,PLUGIN_ID + ".i18n", ResourceBundle.getBundle(PLUGIN_ID + ".i18n")); //$NON-NLS-1$ //$NON-NLS-2$
+	public static final BundleUtil UTIL = new BundleUtil(PLUGIN_ID,PLUGIN_ID + ".i18n", ResourceBundle.getBundle(PLUGIN_ID + ".i18n")); //$NON-NLS-1$ //$NON-NLS-2$
 	
 	public static enum Event implements BundleUtil.Event{
 	}
