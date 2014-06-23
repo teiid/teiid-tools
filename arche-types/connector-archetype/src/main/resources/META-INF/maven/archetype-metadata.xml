@@ -6,7 +6,10 @@
     </requiredProperty>
     <requiredProperty key="vendor-name" >
       <defaultValue/>
-    </requiredProperty>    
+    </requiredProperty>
+    <requiredProperty key="teiid-version" >
+      <defaultValue>8.4.1</defaultValue>
+    </requiredProperty>        
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true" packaged="true">
@@ -27,5 +30,11 @@
         <include>**/*.*</include>
       </includes>      
     </fileSet>       
+    <fileSet filtered="true" packaged="false">
+      <directory>kits</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>      
+    </fileSet>    
   </fileSets>
 </archetype-descriptor>
