@@ -3,7 +3,10 @@
   <requiredProperties>
     <requiredProperty key="translator-name" >
       <defaultValue>CustomTranslator</defaultValue>
-    </requiredProperty>    
+    </requiredProperty>
+    <requiredProperty key="teiid-version" >
+      <defaultValue>8.4.1</defaultValue>
+    </requiredProperty>
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true" packaged="true">
@@ -11,13 +14,7 @@
       <includes>
         <include>**/*.java</include>
       </includes>
-    </fileSet>
-    <fileSet filtered="true" packaged="true">
-      <directory>src/main/module</directory>
-      <includes>
-        <include>**/main/module.xml</include>
-      </includes>
-    </fileSet>    
+    </fileSet>  
     <fileSet filtered="false" packaged="true">
       <directory>src/main/resources</directory>
       <includes>
@@ -31,7 +28,7 @@
       </includes>      
     </fileSet>    
     <fileSet filtered="true" packaged="false">
-      <directory>src/main/assembly</directory>
+      <directory>kits</directory>
       <includes>
         <include>**/*.*</include>
       </includes>      

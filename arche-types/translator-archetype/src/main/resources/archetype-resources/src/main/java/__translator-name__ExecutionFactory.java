@@ -41,7 +41,7 @@ import org.teiid.translator.Translator;
 import org.teiid.translator.TranslatorException;
 
 @Translator(name="${translator-name}", description="${translator-name} custom translator")
-public class ${translator-name}ExecutionFactory extends ExecutionFactory<ConnectionFactory, Object> {
+public class ${translator-name}ExecutionFactory extends ExecutionFactory<ConnectionFactory, ${translator-name}Connection> {
 
 	
 	public ${translator-name}ExecutionFactory() {
@@ -52,7 +52,7 @@ public class ${translator-name}ExecutionFactory extends ExecutionFactory<Connect
     }
 
     @Override
-    public ResultSetExecution createResultSetExecution(QueryExpression command, ExecutionContext executionContext, RuntimeMetadata metadata, Object connectionFactory)
+    public ResultSetExecution createResultSetExecution(QueryExpression command, ExecutionContext executionContext, RuntimeMetadata metadata, ${translator-name}Connection connectionFactory)
     		throws TranslatorException {
     	return new ${translator-name}Execution((Select)command);
     }    
@@ -71,7 +71,7 @@ public class ${translator-name}ExecutionFactory extends ExecutionFactory<Connect
     }
     
 	@Override
-	public void getMetadata(MetadataFactory metadataFactory, Object connection) throws TranslatorException {
+	public void getMetadata(MetadataFactory metadataFactory, ${translator-name}Connection connection) throws TranslatorException {
 	} 
 	
 	@Override
