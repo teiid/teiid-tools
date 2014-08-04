@@ -11,7 +11,6 @@
     <description>Teiid tools to assist in development task.</description>
     <properties>
         <site.url>http://www.jboss.org/teiid</site.url>
-        <version.org.jboss.teiid>8.6.0.Final</version.org.jboss.teiid>
     </properties>
 
     <scm>

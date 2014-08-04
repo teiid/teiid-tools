@@ -4,9 +4,6 @@
     <requiredProperty key="translator-name" >
       <defaultValue>CustomTranslator</defaultValue>
     </requiredProperty>
-    <requiredProperty key="teiid-version" >
-      <defaultValue>8.4.1</defaultValue>
-    </requiredProperty>
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true" packaged="true">
