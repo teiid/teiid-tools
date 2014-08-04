@@ -1,7 +1,7 @@
-<module xmlns="urn:jboss:module:1.1" name="${package}">
+<module xmlns="urn:jboss:module:1.1" name="org.jboss.teiid.resource-adapter.${connector-name}">
    
     <resources>
-        <resource-root path="${connector-name}-${project.version}.jar"/>
+        <resource-root path="${artifactId}-${project.version}.jar"/>
         <resource-root path="."/>
         <!-- Insert resources here -->
     </resources>
