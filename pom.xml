@@ -28,7 +28,18 @@
             <distribution>repo</distribution>
             <comments>A business-friendly OSS license</comments>
         </license>
-    </licenses>
+
+	</licenses>
+   	<url>${site.url}</url> 
+	<distributionManagement>  
+    <repository>  
+    	<id>jboss-releases-repository</id>  
+    	<name>JBoss Releases Repository</name>  
+    	<url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>  
+    </repository>  
+ 
+  	</distributionManagement>  
+    
 
     <developers>
         <developer>
@@ -60,5 +71,5 @@
 
     <modules>
         <module>arche-types</module>
-    </modules>
+  </modules>
 </project>

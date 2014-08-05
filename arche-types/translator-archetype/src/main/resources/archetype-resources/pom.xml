@@ -7,23 +7,27 @@
     <name>${translator-name} Translator</name>
     <description>${translator-name} Translator</description>
     <packaging>jar</packaging>
+    <properties>
+        <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
+        <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
+    </properties>    
     <dependencies>
         <dependency>
             <groupId>org.jboss.teiid</groupId>
             <artifactId>teiid-api</artifactId>
-            <version>${teiid-version}</version>
+            <version>${version.org.jboss.teiid}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.teiid</groupId>
             <artifactId>teiid-common-core</artifactId>
-            <version>${teiid-version}</version>
+            <version>${version.org.jboss.teiid}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.resource</groupId>
             <artifactId>connector-api</artifactId>
-            <version>1.5</version>
+            <version>${version.javax.resource.connector.api}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

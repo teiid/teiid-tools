@@ -10,29 +10,34 @@
       <name>A ${connector-name} resource adapter</name>
       <url>http://www.jboss.org/teiid</url>
 
+    <properties>
+        <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
+        <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
+        <version.junit.junit>3.8.1</version.junit.junit>
+    </properties> 
       <dependencies>
             <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-api</artifactId>
-                <version>${teiid-version}</version>
+                <version>${version.org.jboss.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-common-core</artifactId>
-                <version>${teiid-version}</version>
+                <version>${version.org.jboss.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>javax.resource</groupId>
                 <artifactId>connector-api</artifactId>
-                <version>1.5</version>
+                <version>${version.javax.resource.connector.api}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
               <groupId>junit</groupId>
               <artifactId>junit</artifactId>
-              <version>3.8.1</version>
+              <version>${version.junit.junit}</version>
               <scope>test</scope>
             </dependency>
       </dependencies>  
