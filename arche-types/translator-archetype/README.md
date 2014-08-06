@@ -107,6 +107,7 @@ artifactId: translator-myType
 version: 8.7.0.Alpha2-SNAPSHOT
 package: org.teiid.translator.myType
 translator-name: MyType
+teiid-version:8.7.0.Final
  Y: : 
 
 type Y (yes) and press enter, and the creation of the translator project will be done

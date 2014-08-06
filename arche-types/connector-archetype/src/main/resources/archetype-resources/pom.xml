@@ -46,6 +46,7 @@
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.7</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -63,6 +64,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-rar-plugin</artifactId>
+                <version>2.3</version>
                 <executions>
                     <execution>
                         <id>build_rar</id>
@@ -79,6 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
                 <executions>
                     <execution>
                         <id>install_rar</id>
