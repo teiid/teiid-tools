@@ -55,15 +55,16 @@ After the arche type is installed, then to generate a connector project, do the 
 ***********
 
 mvn archetype:generate                                  \
-  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types               \
+  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
   -DarchetypeVersion=1.0.0               \
   -DgroupId=${groupId}   				\
   -DartifactId=connector-${connector-name}	\
   -Dpackage=org.teiid.resource.adapter.${connector-name}    \
-  -Dversion=${teiid.version}    \
+  -Dversion=${version}    \
   -Dconnector-name=${connector-name}   \
-  -Dvendor-name=${vendor-name}
+  -Dvendor-name=${vendor-name}    \
+  -Dteiid-version=${teiid-version}
 
 
 ********
@@ -76,9 +77,10 @@ mvn archetype:generate                                  \
   -DgroupId		-  (user defined) group ID for the new connector project pom.xml
   -DartifactId		-  (user defined) artifact ID for the new connector project pom.xml
   -Dpackage		-  (user defined) the package structure where the java and resource files will be created
-  -Dversion		-  the Teiid version that the new connector project pom.xml will depend on
+  -Dversion		-  (user defined) the version that the new connector project pom.xml will be
   -Dconnector-name	-  (user defined) the name (type) of the new connector project, used to create the java class names and rar
   -Dvendor-name		-  name of the Vendor for the data source, updates the rar
+  -Dteiid-version   -  the Teiid version the connector will depend upon
 
 
 *********
@@ -87,17 +89,17 @@ mvn archetype:generate                                  \
 
 -  this is an example of the template that can be run:
 
-
-mvn archetype:generate     -s ../teiid/settings.xml    \
-  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types   \
-  -DarchetypeArtifactId=connector-archetype        \
-  -DarchetypeVersion=1.0.0   \
-  -DgroupId=org.jboss.teiid.connectors   \
-  -Dpackage=org.teiid.resource.adapter.myType   \
+mvn archetype:generate 	\
+  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types 	\
+  -DarchetypeArtifactId=connector-archetype	\
+  -DarchetypeVersion=1.0.0	\
+  -DgroupId=org.jboss.teiid.connectors	\
+  -Dpackage=org.teiid.resource.adapter.myType	\
   -DartifactId=connector-myType	\
-  -Dversion=8.7.0.Final   \
-  -Dconnector-name=myType  \
-  -Dvendor-name=MyVendor
+  -Dversion=0.0.1-SNAPSHOT    \
+  -Dconnector-name=myType   \
+  -Dvendor-name=MyVendor	\
+  -Dteiid-version=8.7.0.Final
 
 
 
@@ -106,10 +108,11 @@ When executed, you will be asked to confirm the package property
 Confirm properties configuration:
 groupId: org.jboss.teiid.connectors
 artifactId: connector-myType
-version: 8.7.0.Final
+version: 0.0.1-SNAPSHOT
 package: org.teiid.resource.adapter.myType
 connector-name: myType
 vendor-name: MyVendor
+teiid-version: 8.7.0.Final
  Y: : 
 
 
