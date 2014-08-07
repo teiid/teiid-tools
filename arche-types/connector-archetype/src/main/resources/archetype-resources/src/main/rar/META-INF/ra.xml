@@ -20,7 +20,7 @@
 
       <outbound-resourceadapter>
          <connection-definition>
-            <managedconnectionfactory-class>${package-name}.${connector-name}ManagedConnectionFactory</managedconnectionfactory-class>
+            <managedconnectionfactory-class>${package}.${connector-name}ManagedConnectionFactory</managedconnectionfactory-class>
 
             <!-- Common properties for all connectors -->
             <config-property>

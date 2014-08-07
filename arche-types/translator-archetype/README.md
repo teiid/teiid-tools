@@ -94,7 +94,7 @@ mvn archetype:generate       \
   -DartifactId=translator-myType  \
   -Dpackage=org.teiid.translator.myType    \
   -Dversion=0.0.1-SNAPSHOT	\
-  -Dtranslator-name=MyType  
+  -Dtranslator-name=MyType  \
   -Dteiid-version=8.7.0.Final
 
 
