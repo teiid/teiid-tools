@@ -15,8 +15,8 @@ When the translator project is generated, you will end up with the following str
 						|-	main
 							|-	module.xml
 		|-	jboss-as7-dist.xml 
-	|-	pom.xml
-	|-	src
+	| -	pom.xml
+	| -	src
 		|-	main
 			|-	java
 				|-	${package}
@@ -61,8 +61,10 @@ mvn archetype:generate                                 \
   -DgroupId=${groupId}   				\
   -DartifactId=translator-${translator-name}	\
   -Dpackage=org.teiid.translator.${translator-name}    \
-  -Dversion=${teiid.version}    \
-  -Dtranslator-name=${translator-name}   
+  -Dversion=${version}    \
+  -Dtranslator-name=${translator-name}   \
+  -Dteiid-version=${teiid-version}
+  
 
 ********
 * where:
@@ -74,8 +76,9 @@ mvn archetype:generate                                 \
   -DgroupId		-  (user defined) group ID for the new translator project pom.xml
   -DartifactId		-  (user defined) artifact ID for the new translator project pom.xml
   -Dpackage		-  (user defined) the package structure where the java and resource files will be created
-  -Dversion		-  the Teiid version that the new translator project pom.xml will depend on
+  -Dversion		-  (user defined) the version that the new connector project pom.xml will be
   -Dtranslator-name	-  (user defined) the name (type) of the new translator project, used to create the java class names
+  -Dteiid-version   -  the Teiid version the connector will depend upon
 
 *********
 * EXAMPLE
@@ -90,8 +93,10 @@ mvn archetype:generate       \
   -DgroupId=org.jboss.teiid.connectors  \
   -DartifactId=translator-myType  \
   -Dpackage=org.teiid.translator.myType    \
-  -Dversion=8.7.0.Final	\
+  -Dversion=0.0.1-SNAPSHOT	\
   -Dtranslator-name=MyType  
+  -Dteiid-version=8.7.0.Final
+
 
 
 When executed, you will be asked to confirm the package property
@@ -99,9 +104,10 @@ When executed, you will be asked to confirm the package property
 Confirm properties configuration:
 groupId: org.jboss.teiid.connectors
 artifactId: translator-myType
-version: 8.7.0.Final
+version: 8.7.0.Alpha2-SNAPSHOT
 package: org.teiid.translator.myType
 translator-name: MyType
+teiid-version:8.7.0.Final
  Y: : 
 
 type Y (yes) and press enter, and the creation of the translator project will be done

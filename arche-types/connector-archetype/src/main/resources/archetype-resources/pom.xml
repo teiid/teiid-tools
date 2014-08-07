@@ -1,21 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
-	<modelVersion>4.0.0</modelVersion>
-    <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
-    <packaging>jar</packaging>
+      <modelVersion>4.0.0</modelVersion>
+      <groupId>${groupId}</groupId>
+      <artifactId>${artifactId}</artifactId>
+      <version>${version}</version>
+      <packaging>jar</packaging>
       
-    <name>A ${connector-name} resource adapter</name>
-    <url>http://www.jboss.org/teiid</url>
+      <name>A ${connector-name} resource adapter</name>
+      <url>http://www.jboss.org/teiid</url>
 
     <properties>
-        <version.org.jboss.teiid>${version}</version.org.jboss.teiid>
+        <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
         <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
         <version.junit.junit>3.8.1</version.junit.junit>
-    </properties>
-    <dependencies>
+    </properties> 
+      <dependencies>
             <dependency>
                 <groupId>org.jboss.teiid</groupId>
                 <artifactId>teiid-api</artifactId>
@@ -40,12 +40,13 @@
               <version>${version.junit.junit}</version>
               <scope>test</scope>
             </dependency>
-    </dependencies>  
+      </dependencies>  
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.7</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -63,6 +64,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-rar-plugin</artifactId>
+                <version>2.3</version>
                 <executions>
                     <execution>
                         <id>build_rar</id>
@@ -79,6 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
+                <version>2.4</version>
                 <executions>
                     <execution>
                         <id>install_rar</id>

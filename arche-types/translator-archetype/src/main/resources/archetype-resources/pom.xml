@@ -8,9 +8,9 @@
     <description>${translator-name} Translator</description>
     <packaging>jar</packaging>
     <properties>
-        <version.org.jboss.teiid>${version}</version.org.jboss.teiid>
+        <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
         <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
-    </properties>
+    </properties>    
     <dependencies>
         <dependency>
             <groupId>org.jboss.teiid</groupId>
@@ -55,6 +55,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
                     <descriptors>
                         <descriptor>kits/jboss-as7-dist.xml</descriptor>
