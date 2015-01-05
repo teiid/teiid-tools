@@ -5,10 +5,10 @@
       <groupId>${groupId}</groupId>
       <artifactId>${artifactId}</artifactId>
       <version>${version}</version>
+      <name>${connector-name} Resource Adapter</name>
+      <description>${connector-name} Resource Adapter</description>
+
       <packaging>jar</packaging>
-      
-      <name>A ${connector-name} resource adapter</name>
-      <url>http://www.jboss.org/teiid</url>
 
     <properties>
         <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
