@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+	<parent>
+    	<groupId>org.jboss.integration-platform</groupId>
+    	<artifactId>jboss-integration-platform-parent</artifactId>
+    	<version>6.0.0.CR13</version>	
+	</parent>
+	
     <groupId>org.jboss.teiid</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>teiid-tools</artifactId>
     <packaging>pom</packaging>
     <name>Teiid Tools</name>
-    <version>1.0.0</version>
+    <version>8.7.0</version>
 
     <description>Teiid tools to assist in development task.</description>
     <properties>
         <site.url>http://www.jboss.org/teiid</site.url>
+        
+		<version.org.jboss.integration-platform>6.0.0.CR13</version.org.jboss.integration-platform>
+		
+		<version.maven.archetype>2.2</version.maven.archetype>
     </properties>
 
     <scm>
@@ -29,14 +38,6 @@
         </license>
     </licenses>
 	<url>${site.url}</url>    
-	<distributionManagement>  
-		<repository>  
-			<id>jboss-releases-repository</id>  
-			<name>JBoss Releases Repository</name>  
-			<url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>  
-		</repository>  
-	</distributionManagement>  
-    
 
     <developers>
         <developer>
@@ -69,4 +70,17 @@
     <modules>
         <module>arche-types</module>
     </modules>
+    
+	<dependencyManagement>
+		<dependencies>
+		
+           <dependency>
+            	<groupId>org.jboss.integration-platform</groupId>
+            	<artifactId>jboss-integration-platform-bom</artifactId>
+            	<version>${version.org.jboss.integration-platform}</version>
+            	<scope>import</scope>
+            	<type>pom</type>
+          </dependency> 			
+         </dependencies>      
+    </dependencyManagement>	    
 </project>
