@@ -1,16 +1,16 @@
 <archetype-catalog>
     <archetypes>
         <archetype>
-            <groupId>org.jboss.teiid.teiid-tools.arche-types</groupId>
+            <groupId>org.jboss.teiid.arche-types</groupId>
             <artifactId>translator-archetype</artifactId>
-            <version>1.0.0</version>
+            <version>8.7.1</version>
             <description>Creates an example project for creating a new Teiid translator</description>
 
         </archetype>
         <archetype>
-            <groupId>org.jboss.teiid.teiid-tools.arche-types</groupId>
+            <groupId>org.jboss.teiid.arche-types</groupId>
             <artifactId>connector-archetype</artifactId>
-            <version>1.0.0</version>
+            <version>8.7.1</version>
             <description>Creates an example project for creating a new Teiid connector</description>
         </archetype>
 
