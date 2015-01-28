@@ -8,7 +8,7 @@ Install Project
 -------
 
 Get project:
--   run: git clone git@git@github.com:teiid/teiid-tools.git
+-   run: git clone git@github.com:teiid/teiid-tools.git
 
 Build project (install archetypes):
 
