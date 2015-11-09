@@ -1,14 +1,17 @@
 <archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"  name="connector-archetype">
   <requiredProperties>
-    <requiredProperty key="connector-name" >
-      <defaultValue/>
+    <requiredProperty key="connector-type" >
+      <defaultValue>connector</defaultValue>
     </requiredProperty>
+    <requiredProperty key="connector-name" >
+      <defaultValue>ConnectorName</defaultValue>
+    </requiredProperty>    
     <requiredProperty key="vendor-name" >
-      <defaultValue/>
+      <defaultValue>NoVendorSpecified</defaultValue>
     </requiredProperty>
     <requiredProperty key="teiid-version" >
-      <defaultValue>8.4.1</defaultValue>
+      <defaultValue>8.12.0.Final</defaultValue>
     </requiredProperty>        
   </requiredProperties>
   <fileSets>
@@ -35,6 +38,12 @@
       <includes>
         <include>**/*.*</include>
       </includes>      
-    </fileSet>    
+    </fileSet>  
+    <fileSet filtered="false" packaged="false">
+      <directory>.</directory>
+      <includes>
+        <include>settings.xml</include>
+      </includes>      
+    </fileSet>           
   </fileSets>
 </archetype-descriptor>

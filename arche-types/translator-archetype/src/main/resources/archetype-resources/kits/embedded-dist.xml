@@ -22,7 +22,7 @@
   
   <dependencySets>
      <dependencySet>
-         <outputDirectory>optional/${translator-name}</outputDirectory>
+         <outputDirectory>optional/${translator-type}</outputDirectory>
          <unpack>false</unpack>
          <useTransitiveDependencies>false</useTransitiveDependencies>
      </dependencySet>

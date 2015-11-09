@@ -3,10 +3,10 @@
     <parent>
         <artifactId>teiid-tools</artifactId>
         <groupId>org.jboss.teiid</groupId>
-        <version>8.7.1</version>
+        <version>8.12.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.jboss.teiid.teiid-tools</groupId>
+    <groupId>org.jboss.teiid</groupId>
     <artifactId>arche-types</artifactId>
     <packaging>pom</packaging>
     <name>Archtype projects</name>

@@ -9,9 +9,15 @@ When the connector project is generated, you will end up with the following stru
 	|-	kits
 		|-	embedded-dist.xml
 		|-	jboss-as7
+			|-	docs
+				|-	teiid
+					|-	datasources
+						|-	${connector-type}	
+							|-	${connector-type}-ds.cli
+							|-  ${connector-type}-ds.xml		
 			|-	modules
-				|-	${package}
-					|-	${translator-name}
+				|-	${module-location}
+					|-	${connector-type}
 						|-	main
 							|-	module.xml
 		|-	jboss-as7-dist.xml 
@@ -23,6 +29,7 @@ When the connector project is generated, you will end up with the following stru
 					|-	${connector-name}ConnectionImpl.java
 					|-	${connector-name}ManagedConnectionFactory.java
 					|-	${connector-name}Plugin.java
+					|-	${connector-name}ResourceAdapter.java
 			|-	rar
 				|-	META-INF
 					|-	ra.xml
@@ -54,14 +61,15 @@ After the arche type is installed, then to generate a connector project, do the 
 * TEMPLATE
 ***********
 
-mvn archetype:generate                                  \
-  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types                \
+mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+  -DarchetypeGroupId=org.jboss.teiid.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
   -DarchetypeVersion=1.0.0               \
   -DgroupId=${groupId}   				\
-  -DartifactId=connector-${connector-name}	\
-  -Dpackage=org.teiid.resource.adapter.${connector-name}    \
+  -DartifactId=connector-${connector-type}	\
+  -Dpackage=org.teiid.resource.adapter.${connector-type}    \
   -Dversion=${version}    \
+  -Dconnector-type=${connector-type}   \
   -Dconnector-name=${connector-name}   \
   -Dvendor-name=${vendor-name}    \
   -Dteiid-version=${teiid-version}
@@ -78,9 +86,10 @@ mvn archetype:generate                                  \
   -DartifactId		-  (user defined) artifact ID for the new connector project pom.xml
   -Dpackage		-  (user defined) the package structure where the java and resource files will be created
   -Dversion		-  (user defined) the version that the new connector project pom.xml will be
-  -Dconnector-name	-  (user defined) the name (type) of the new connector project, used to create the java class names and rar
+  -Dconnector-type	-  (user defined) the type of the new connector project, used in defining the package name
+  -Dconnector-name	-  (user defined) the name of the new connector project, used as the prefix to creating the java class names
   -Dvendor-name		-  name of the Vendor for the data source, updates the rar
-  -Dteiid-version   -  the Teiid version the connector will depend upon
+  -Dteiid-version   -  [optional] the Teiid version the connector will depend upon
 
 
 *********
@@ -89,17 +98,18 @@ mvn archetype:generate                                  \
 
 -  this is an example of the template that can be run:
 
-mvn archetype:generate 	\
-  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types 	\
-  -DarchetypeArtifactId=connector-archetype	\
-  -DarchetypeVersion=1.0.0	\
-  -DgroupId=org.jboss.teiid.connectors	\
-  -Dpackage=org.teiid.resource.adapter.myType	\
-  -DartifactId=connector-myType	\
+mvn archetype:generate 	-DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+  -DarchetypeGroupId=org.jboss.teiid.arche-types 	\
+  -DarchetypeArtifactId=connector-archetype 	\
+  -DarchetypeVersion=8.12.0               \
+  -DgroupId=org.jboss.teiid.connectors \
+  -Dpackage=org.teiid.resource.adapter.mytype \
+  -DartifactId=connector-mytype	\
   -Dversion=0.0.1-SNAPSHOT    \
-  -Dconnector-name=myType   \
+  -Dconnector-type=mytype   \
+  -Dconnector-name=MyType   \
   -Dvendor-name=MyVendor	\
-  -Dteiid-version=8.7.0.Final
+  -Dteiid-version=8.12.0.Final
 
 
 
@@ -107,12 +117,13 @@ When executed, you will be asked to confirm the package property
 
 Confirm properties configuration:
 groupId: org.jboss.teiid.connectors
-artifactId: connector-myType
+artifactId: connector-mytype
 version: 0.0.1-SNAPSHOT
-package: org.teiid.resource.adapter.myType
-connector-name: myType
+package: org.teiid.resource.adapter.mytype
+connector-type: mytype
+connector-name: MyType
 vendor-name: MyVendor
-teiid-version: 8.7.0.Final
+teiid-version: 8.12.0.Final
  Y: : 
 
 

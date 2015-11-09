@@ -16,7 +16,7 @@
       <license-required>true</license-required>
    </license>
    <resourceadapter>
-      <resourceadapter-class>org.teiid.resource.spi.BasicResourceAdapter</resourceadapter-class>
+      <resourceadapter-class>${package}.${connector-name}ResourceAdapter</resourceadapter-class>
 
       <outbound-resourceadapter>
          <connection-definition>
