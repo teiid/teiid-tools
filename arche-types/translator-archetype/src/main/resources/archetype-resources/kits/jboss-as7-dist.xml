@@ -13,23 +13,29 @@
  <fileSets>
     <fileSet>
         <directory>kits/jboss-as7/modules</directory>
-        <outputDirectory>/modules/system/layers/base</outputDirectory>     
+        <outputDirectory>${jbossas-module-root}</outputDirectory>     
         <filtered>true</filtered> 
         <includes>
           <include>**/*</include>
         </includes>   
-    </fileSet>    
+    </fileSet>   
+    <fileSet>
+        <directory>kits/jboss-as7/docs</directory>
+        <outputDirectory>docs</outputDirectory> 
+        <filtered>true</filtered> 
+        <includes>
+          <include>**/*</include>
+        </includes>   
+    </fileSet>       
   </fileSets>
   
   <dependencySets>
     <dependencySet>
-      <outputDirectory>/modules/system/layers/base/org/jboss/teiid/translator/${translator-name}/main</outputDirectory>
+      <outputDirectory>${jbossas-module-root}/org/jboss/teiid/translator/${translator-type}/main</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
-      <!-- to exclude dependencies 
       <includes>
-        <include>${group}:translator-${translator-name}</include>
+        <include>${groupId}:${artifactId}</include>
       </includes>
-      -->
     </dependencySet>
   </dependencySets>  
   

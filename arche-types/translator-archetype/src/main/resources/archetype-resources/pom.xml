@@ -10,6 +10,7 @@
     <properties>
         <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
         <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
+        <jbossas-module-root>modules/system/layers/dv</jbossas-module-root>
     </properties>    
     <dependencies>
         <dependency>

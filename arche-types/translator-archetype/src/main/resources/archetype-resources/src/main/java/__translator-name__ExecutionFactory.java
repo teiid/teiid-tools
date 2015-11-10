@@ -40,7 +40,7 @@ import org.teiid.translator.ResultSetExecution;
 import org.teiid.translator.Translator;
 import org.teiid.translator.TranslatorException;
 
-@Translator(name="${translator-name}", description="${translator-name} custom translator")
+@Translator(name="${translator-type}", description="${translator-name} custom translator")
 public class ${translator-name}ExecutionFactory extends ExecutionFactory<ConnectionFactory, ${translator-name}Connection> {
 
 	

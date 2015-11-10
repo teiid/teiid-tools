@@ -5,13 +5,18 @@ This maven project is use to create the TEIID Translator archetype, which then c
 
 When the translator project is generated, you will end up with the following structure:
 
--  translator-${translator-name}
+-  translator-${translator-type}
 	|-	kits
 		|-	embedded-dist.xml
 		|-	jboss-as7
+			|-	docs
+				|-	teiid
+					|-	datasources
+						|-	${translator-type}	
+							|-	add-translator-${translator-type}.cli
 			|-	modules
-				|-	${package}
-					|-	${translator-name}
+				|-	${module-location}
+					|-	${translator-type}
 						|-	main
 							|-	module.xml
 		|-	jboss-as7-dist.xml 
@@ -20,6 +25,7 @@ When the translator project is generated, you will end up with the following str
 		|-	main
 			|-	java
 				|-	${package}
+					|-	${translator-name}Connection.java
 					|-	${translator-name}Execution.java
 					|-	${translator-name}ExecutionFactory.java
 					|-	${translator-name}Plugin.java
@@ -54,15 +60,16 @@ After the arche type is installed, then to generate a translator project, do the
 * TEMPLATE
 ***********
 
-mvn archetype:generate                                 \
-  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types               \
+mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+  -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=translator-archetype          \
-  -DarchetypeVersion=1.0.0               \
+  -DarchetypeVersion=8.12.0               \
   -DgroupId=${groupId}   				\
-  -DartifactId=translator-${translator-name}	\
-  -Dpackage=org.teiid.translator.${translator-name}    \
+  -DartifactId=translator-${translator-type}	\
+  -Dpackage=org.teiid.translator.${translator-type}    \
   -Dversion=${version}    \
-  -Dtranslator-name=${translator-name}   \
+  -Dtranslator-type=${translator-type}   \
+  -Dtranslator-name=${translator-name}
   -Dteiid-version=${teiid-version}
   
 
@@ -77,8 +84,9 @@ mvn archetype:generate                                 \
   -DartifactId		-  (user defined) artifact ID for the new translator project pom.xml
   -Dpackage		-  (user defined) the package structure where the java and resource files will be created
   -Dversion		-  (user defined) the version that the new connector project pom.xml will be
-  -Dtranslator-name	-  (user defined) the name (type) of the new translator project, used to create the java class names
-  -Dteiid-version   -  the Teiid version the connector will depend upon
+  -Dtranslator-type	-  (user defined) the translator type that's used by Teiid when mapping the physical source to the translator to use 
+  -Dtranslator-name	-  (user defined) the translator name thats used for name the java class names
+  -Dteiid-version   -  [optional] the Teiid version the connector will depend upon, if not specified will default 
 
 *********
 * EXAMPLE
@@ -86,29 +94,31 @@ mvn archetype:generate                                 \
 
 -  this is an example of the template that can be run:
 
-mvn archetype:generate       \
-  -DarchetypeGroupId=org.jboss.teiid.teiid-tools.arche-types   \
+mvn archetype:generate   -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+  -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=translator-archetype  \
-  -DarchetypeVersion=1.0.0  \
+  -DarchetypeVersion=8.12.0  \
   -DgroupId=org.jboss.teiid.connectors  \
   -DartifactId=translator-myType  \
   -Dpackage=org.teiid.translator.myType    \
   -Dversion=0.0.1-SNAPSHOT	\
+  -Dtranslator-type=mytype  \
   -Dtranslator-name=MyType  \
-  -Dteiid-version=8.7.0.Final
-
+  -Dteiid-version=8.12.0.Final
 
 
 When executed, you will be asked to confirm the package property
 
 Confirm properties configuration:
-groupId: org.jboss.teiid.connectors
-artifactId: translator-myType
-version: 8.7.0.Alpha2-SNAPSHOT
-package: org.teiid.translator.myType
+groupId: org.jboss.teiid.connector
+artifactId: translator-mtype
+version: 0.0.1-SNAPSHOT
+package: org.teiid.translator.mytype
+teiid-version: 8.12.0.Final
 translator-name: MyType
-teiid-version:8.7.0.Final
- Y: : 
+translator-type: mytype
+ Y: : y
+
 
 type Y (yes) and press enter, and the creation of the translator project will be done
 

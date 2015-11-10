@@ -22,7 +22,7 @@
     <files>
         <file>
             <source>${project.build.directory}/${project.artifactId}-${project.version}-lib.jar</source>
-            <outputDirectory>optional/${connector-name}</outputDirectory>
+            <outputDirectory>optional/${connector-type}</outputDirectory>
         </file>
     </files>
 
