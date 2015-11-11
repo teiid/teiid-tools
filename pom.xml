@@ -17,7 +17,7 @@
     <properties>
         <site.url>http://www.jboss.org/teiid</site.url>
         
-		<version.org.jboss.integration-platform>6.0.0.CR26</version.org.jboss.integration-platform>
+		<version.org.jboss.integration-platform>6.0.0.CR30</version.org.jboss.integration-platform>
 		<version.teiid>8.12.0.Final</version.teiid>
 		<version.junit>4.11</version.junit>
         <version.org.mockito>1.9.5</version.org.mockito>
