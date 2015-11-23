@@ -98,11 +98,11 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 
 -  this is an example of the template that can be run:
 
-mvn archetype:generate 	-DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types 	\
-  -DarchetypeArtifactId=connector-archetype 	\
-  -DarchetypeVersion=8.12.0               \
-  -DgroupId=org.jboss.teiid.connectors \
+mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                   \
+  -DarchetypeGroupId=org.jboss.teiid.arche-types   \
+  -DarchetypeArtifactId=connector-archetype  \
+  -DarchetypeVersion=8.12.0  \
+  -DgroupId=org.jboss.teiid.connectors  \
   -Dpackage=org.teiid.resource.adapter.mytype \
   -DartifactId=connector-mytype	\
   -Dversion=0.0.1-SNAPSHOT    \
