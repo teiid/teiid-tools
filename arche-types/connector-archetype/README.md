@@ -1,50 +1,7 @@
 TEIID Connector Arche Type
 ================
 
-This maven project is use to create the TEIID Connector archetype, which then can be used to generate a new connector project.
-
-When the connector project is generated, you will end up with the following structure:
-
--  connector-${connector-name}
-	|-	kits
-		|-	embedded-dist.xml
-		|-	jboss-as7
-			|-	docs
-				|-	teiid
-					|-	datasources
-						|-	${connector-type}	
-							|-	${connector-type}-ds.cli
-							|-  ${connector-type}-ds.xml		
-			|-	modules
-				|-	${module-location}
-					|-	${connector-type}
-						|-	main
-							|-	module.xml
-		|-	jboss-as7-dist.xml 
-	| -	pom.xml
-	| -	src
-		|-	main
-			|-	java
-				|-	${package}
-					|-	${connector-name}ConnectionImpl.java
-					|-	${connector-name}ManagedConnectionFactory.java
-					|-	${connector-name}Plugin.java
-					|-	${connector-name}ResourceAdapter.java
-			|-	rar
-				|-	META-INF
-					|-	ra.xml
-			|-	resources
-				|-	${package}
-						|-	i18n.properties
-
-
--------
-Install Arche Type
--------
-
-To package and install the arche type, run:
-
-mvn clean install 
+This maven project will be created when the Teiid Connector Archetype is generated.  
 
 
 -----------
@@ -64,7 +21,7 @@ After the arche type is installed, then to generate a connector project, do the 
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
-  -DarchetypeVersion=1.0.0               \
+  -DarchetypeVersion=8.12.1               \
   -DgroupId=${groupId}   				\
   -DartifactId=connector-${connector-type}	\
   -Dpackage=org.teiid.resource.adapter.${connector-type}    \
@@ -101,7 +58,7 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                   \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=connector-archetype  \
-  -DarchetypeVersion=8.12.0  \
+  -DarchetypeVersion=8.12.1  \
   -DgroupId=org.jboss.teiid.connectors  \
   -Dpackage=org.teiid.resource.adapter.mytype \
   -DartifactId=connector-mytype	\
@@ -128,4 +85,15 @@ teiid-version: 8.12.0.Final
 
 
 type Y (yes) and press enter, and the creation of the translator project will be done
+
+
+-------
+Install Arche Type
+-------
+
+To package and install the arche type, run:
+
+mvn clean install 
+
+
 

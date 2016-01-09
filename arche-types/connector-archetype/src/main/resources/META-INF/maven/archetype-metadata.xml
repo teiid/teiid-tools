@@ -11,7 +11,7 @@
       <defaultValue>NoVendorSpecified</defaultValue>
     </requiredProperty>
     <requiredProperty key="teiid-version" >
-      <defaultValue>8.12.0.Final</defaultValue>
+      <defaultValue>TeiidVersion</defaultValue>
     </requiredProperty>        
   </requiredProperties>
   <fileSets>
@@ -38,12 +38,6 @@
       <includes>
         <include>**/*.*</include>
       </includes>      
-    </fileSet>  
-    <fileSet filtered="false" packaged="false">
-      <directory>.</directory>
-      <includes>
-        <include>settings.xml</include>
-      </includes>      
-    </fileSet>           
+    </fileSet>          
   </fileSets>
 </archetype-descriptor>

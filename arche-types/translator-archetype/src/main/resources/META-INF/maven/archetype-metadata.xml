@@ -8,7 +8,7 @@
       <defaultValue>TranslatorName</defaultValue>
     </requiredProperty>
     <requiredProperty key="teiid-version" >
-      <defaultValue>8.12.0.Final</defaultValue>
+      <defaultValue>TeiidVersion</defaultValue>
     </requiredProperty>
   </requiredProperties>
   <fileSets>
