@@ -3,11 +3,10 @@
     <parent>
         <artifactId>arche-types</artifactId>
         <groupId>org.jboss.teiid</groupId>
-        <version>8.12.0</version>
+        <version>8.12.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <!--groupId>org.jboss.teiid.arche-types</groupId-->
     <groupId>org.jboss.teiid.arche-types</groupId>
     <artifactId>translator-archetype</artifactId>
     <packaging>maven-archetype</packaging>

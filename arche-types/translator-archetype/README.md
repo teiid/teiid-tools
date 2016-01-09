@@ -3,48 +3,6 @@ TEIID Translator Arche Type
 
 This maven project is use to create the TEIID Translator archetype, which then can be used to generate a new translator project.
 
-When the translator project is generated, you will end up with the following structure:
-
--  translator-${translator-type}
-	|-	kits
-		|-	embedded-dist.xml
-		|-	jboss-as7
-			|-	docs
-				|-	teiid
-					|-	datasources
-						|-	${translator-type}	
-							|-	add-translator-${translator-type}.cli
-			|-	modules
-				|-	${module-location}
-					|-	${translator-type}
-						|-	main
-							|-	module.xml
-		|-	jboss-as7-dist.xml 
-	| -	pom.xml
-	| -	src
-		|-	main
-			|-	java
-				|-	${package}
-					|-	${translator-name}Connection.java
-					|-	${translator-name}Execution.java
-					|-	${translator-name}ExecutionFactory.java
-					|-	${translator-name}Plugin.java
-			|-	resources
-				|-	${package}
-						|-	i18n.properties
-				|-	META-INF
-					|-	services
-						|-	org.teiid.translator.ExecutionFactory
-
-
--------
-Install Arche Type
--------
-
-To package and install the arche type, run:
-
-mvn clean install 
-
 
 -----------
 Generate Project
@@ -63,7 +21,7 @@ After the arche type is installed, then to generate a translator project, do the
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=translator-archetype          \
-  -DarchetypeVersion=8.12.0               \
+  -DarchetypeVersion=8.12.1               \
   -DgroupId=${groupId}   				\
   -DartifactId=translator-${translator-type}	\
   -Dpackage=org.teiid.translator.${translator-type}    \
@@ -97,7 +55,7 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate   -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=translator-archetype  \
-  -DarchetypeVersion=8.12.0  \
+  -DarchetypeVersion=8.12.1  \
   -DgroupId=org.jboss.teiid.connectors  \
   -DartifactId=translator-myType  \
   -Dpackage=org.teiid.translator.myType    \

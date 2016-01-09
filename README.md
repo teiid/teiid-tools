@@ -4,7 +4,7 @@ teiid-tools
 This project contains tools to help with Teiid development tasks
 
 -------
-Install Project
+Install Project and arche types
 -------
 
 Get project:
@@ -20,7 +20,5 @@ Tools
 
 -   connector-archetype  for creating new connectors
 -   translator-archetype  for creating new translator
-
-
 
 
