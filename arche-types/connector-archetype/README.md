@@ -21,7 +21,7 @@ After the arche type is installed, then to generate a connector project, do the 
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
-  -DarchetypeVersion=8.12.1               \
+  -DarchetypeVersion=9.0.0               \
   -DgroupId=${groupId}   				\
   -DartifactId=connector-${connector-type}	\
   -Dpackage=org.teiid.resource.adapter.${connector-type}    \
@@ -58,7 +58,7 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                   \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=connector-archetype  \
-  -DarchetypeVersion=8.12.1  \
+  -DarchetypeVersion=9.0.0  \
   -DgroupId=org.jboss.teiid.connectors  \
   -Dpackage=org.teiid.resource.adapter.mytype \
   -DartifactId=connector-mytype	\
@@ -66,7 +66,7 @@ mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/n
   -Dconnector-type=mytype   \
   -Dconnector-name=MyType   \
   -Dvendor-name=MyVendor	\
-  -Dteiid-version=8.12.0.Final
+  -Dteiid-version=9.0.0.Final
 
 
 
@@ -80,7 +80,7 @@ package: org.teiid.resource.adapter.mytype
 connector-type: mytype
 connector-name: MyType
 vendor-name: MyVendor
-teiid-version: 8.12.0.Final
+teiid-version: 9.0.0.Final
  Y: : 
 
 

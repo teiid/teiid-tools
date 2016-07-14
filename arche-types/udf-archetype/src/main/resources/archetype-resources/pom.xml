@@ -40,8 +40,7 @@
                 <version>2.4</version>
                 <configuration>
                     <descriptors>
-                        <descriptor>kits/jboss-as7-dist.xml</descriptor>
-                        <descriptor>kits/embedded-dist.xml</descriptor>
+                        <descriptor>kits/wildfly-dist.xml</descriptor>
                     </descriptors>
                 </configuration>
                 <executions>

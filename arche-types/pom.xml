@@ -38,4 +38,59 @@
         <module>udf-archetype</module>
     </modules>
 
+    <profiles>
+        <profile>
+            <id>archetype</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-deploy-plugin</artifactId>
+                            <version>2.4</version>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-archetype-plugin</artifactId>
+                        <version>${version.maven.archetype}</version>
+                        <inherited>false</inherited>
+                        <!--configuration-->
+                            <!-- Process normal Java files & docs -->
+                            <!--archetypeFilteredExtentions>java,xml,txt,properties</archetypeFilteredExtentions-->
+                        <!--/configuration-->
+                        <executions>
+                            <execution>
+                                <id>generate-archetype-install</id>
+                                <phase>install</phase>
+                                <configuration>
+                                    <archetypePostPhase>install</archetypePostPhase>
+                                    <packageName>${project.groupId}</packageName>
+                                </configuration>
+                                <goals>
+                                    <goal>create-from-project</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>generate-archetype-deploy</id>
+                                <phase>deploy</phase>
+                                <configuration>
+                                    <archetypePostPhase>deploy</archetypePostPhase>
+                                </configuration>
+                                <goals>
+                                    <goal>create-from-project</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
 </project>

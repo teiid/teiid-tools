@@ -7,8 +7,7 @@ When the translator project is generated, you will end up with the following str
 
 -  translator-${translator-type}
 	|-	kits
-		|-	embedded-dist.xml
-		|-	jboss-as7
+		|-	wildfly
 			|-	docs
 				|-	teiid
 					|-	datasources
@@ -19,7 +18,7 @@ When the translator project is generated, you will end up with the following str
 					|-	${translator-type}
 						|-	main
 							|-	module.xml
-		|-	jboss-as7-dist.xml 
+		|-	wildfly-dist.xml 
 	| -	pom.xml
 	| -	src
 		|-	main
