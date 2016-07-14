@@ -14,7 +14,7 @@
         <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
         <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
         <version.junit.junit>3.8.1</version.junit.junit>
-        <jbossas-module-root>modules/system/layers/dv</jbossas-module-root>
+        <wildfly-module-root>modules/system/layers/dv</wildfly-module-root>
     </properties> 
       <dependencies>
             <dependency>
@@ -122,8 +122,7 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<descriptors>
-						<descriptor>kits/jboss-as7-dist.xml</descriptor>
-						<descriptor>kits/embedded-dist.xml</descriptor>
+						<descriptor>kits/wildfly-dist.xml</descriptor>
 					</descriptors>
 				</configuration>
 				<executions>

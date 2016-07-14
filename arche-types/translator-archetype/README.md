@@ -21,7 +21,7 @@ After the arche type is installed, then to generate a translator project, do the
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=translator-archetype          \
-  -DarchetypeVersion=8.12.1               \
+  -DarchetypeVersion=9.0.0               \
   -DgroupId=${groupId}   				\
   -DartifactId=translator-${translator-type}	\
   -Dpackage=org.teiid.translator.${translator-type}    \
@@ -55,14 +55,14 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate   -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=translator-archetype  \
-  -DarchetypeVersion=8.12.1  \
+  -DarchetypeVersion=9.0.0  \
   -DgroupId=org.jboss.teiid.connectors  \
   -DartifactId=translator-myType  \
   -Dpackage=org.teiid.translator.myType    \
   -Dversion=0.0.1-SNAPSHOT	\
   -Dtranslator-type=mytype  \
   -Dtranslator-name=MyType  \
-  -Dteiid-version=8.12.0.Final
+  -Dteiid-version=9.0.0.Final
 
 
 When executed, you will be asked to confirm the package property
@@ -72,7 +72,7 @@ groupId: org.jboss.teiid.connector
 artifactId: translator-mtype
 version: 0.0.1-SNAPSHOT
 package: org.teiid.translator.mytype
-teiid-version: 8.12.0.Final
+teiid-version: 9.0.0.Final
 translator-name: MyType
 translator-type: mytype
  Y: : y

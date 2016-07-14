@@ -7,8 +7,7 @@ When the project is generated, you should have ended up with the following struc
 
 -  connector-${connector-name}
 	|-	kits
-		|-	embedded-dist.xml
-		|-	jboss-as7
+		|-	wildfly
 			|-	docs
 				|-	teiid
 					|-	datasources
@@ -20,7 +19,7 @@ When the project is generated, you should have ended up with the following struc
 					|-	${connector-type}
 						|-	main
 							|-	module.xml
-		|-	jboss-as7-dist.xml 
+		|-	wildfly-dist.xml 
 	| -	pom.xml
 	| -	src
 		|-	main
