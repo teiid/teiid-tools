@@ -35,6 +35,7 @@
     <modules>
         <module>translator-archetype</module>
         <module>connector-archetype</module>
+        <module>udf-archetype</module>
     </modules>
 
 </project>
