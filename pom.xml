@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.jboss.teiid</groupId>
-		<artifactId>teiid-parent</artifactId>
-    	<version>8.12.0.Final</version>	
-	</parent>
 	
     <groupId>org.jboss.teiid</groupId>
     <artifactId>teiid-tools</artifactId>
@@ -20,7 +15,7 @@
 		<version.org.jboss.integration-platform>6.0.0.CR30</version.org.jboss.integration-platform>
 		<version.teiid>8.12.0.Final</version.teiid>
 		<version.junit>4.11</version.junit>
-        <version.org.mockito>1.9.5</version.org.mockito>
+                <version.org.mockito>1.9.5</version.org.mockito>
 		<version.xerces>2.11.0</version.xerces>
 		<version.maven.archetype>2.4</version.maven.archetype>
     </properties>
@@ -92,8 +87,8 @@
         <module>arche-types</module>
     </modules>
     
-	<dependencyManagement>
-		<dependencies>
+    <dependencyManagement>
+	<dependencies>
 		
            <dependency>
             	<groupId>org.jboss.integration-platform</groupId>
@@ -112,27 +107,27 @@
                 <artifactId>mockito-all</artifactId>
                 <version>${version.org.mockito}</version>
             </dependency> 
-			<dependency>
-				<groupId>org.jboss.teiid</groupId>
-				<artifactId>teiid-common-core</artifactId>
-				<version>${version.teiid}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.teiid</groupId>
-				<artifactId>teiid-client</artifactId>
-				<version>${version.teiid}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.teiid</groupId>
-				<artifactId>teiid</artifactId>
-				<version>${version.teiid}</version>
-				<classifier>jdbc</classifier>
-			</dependency>	
-			<dependency>
-                <groupId>xerces</groupId>
-                <artifactId>xercesImpl</artifactId>		   
-				<version>${version.xerces}</version>
-			</dependency>	
+		<dependency>
+			<groupId>org.jboss.teiid</groupId>
+			<artifactId>teiid-common-core</artifactId>
+			<version>${version.teiid}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.teiid</groupId>
+			<artifactId>teiid-client</artifactId>
+			<version>${version.teiid}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.teiid</groupId>
+			<artifactId>teiid</artifactId>
+			<version>${version.teiid}</version>
+			<classifier>jdbc</classifier>
+		</dependency>	
+	        <dependency>
+                        <groupId>xerces</groupId>
+                        <artifactId>xercesImpl</artifactId>		   
+			<version>${version.xerces}</version>
+		</dependency>	
          </dependencies>      
     </dependencyManagement>	    
 </project>
