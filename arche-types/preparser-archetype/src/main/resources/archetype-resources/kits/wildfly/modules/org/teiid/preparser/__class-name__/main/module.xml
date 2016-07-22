@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module xmlns="urn:jboss:module:1.0" name="org.jboss.teiid.translator.${translator-type}">
+<module xmlns="urn:jboss:module:1.0" name="${package}.${class-name}">
 
     <resources>
-        <resource-root path="${artifactId}-${project.version}.jar" />
+        <resource-root path="${artifactId}-${version}.jar" />
         <!-- Insert resources here -->
     </resources>
 
