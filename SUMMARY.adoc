@@ -1,0 +1,8 @@
+= Summary
+
+. link:Legal_Notice.adoc[Legal Notice]
+. link:arche-types/connector-archetype/ConnectorArcheType.adoc[Connector ArcheType]
+. link:arche-types/translator-archetype/TranslatorArcheType.adoc[Translator Archetype]
+. link:arche-types/udf-archetype/UDFArcheType.adoc[UDF Archetype] 
+. link:arche-types/preparser-archetype/PreParserArcheType.adoc[PreParser Archetype] 
+
