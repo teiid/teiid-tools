@@ -1,12 +1,10 @@
-TEIID Connector Arche Type
-================
+= TEIID Connector Arche Type
 
 This maven project will be created when the Teiid Connector Archetype is generated.  
 
 
------------
-Generate Project
------------
+== Generate Project
+
 
 After the arche type is installed, then to generate a connector project, do the following:
 
@@ -87,13 +85,13 @@ teiid-version: 9.0.0.Final
 type Y (yes) and press enter, and the creation of the translator project will be done
 
 
--------
-Install Arche Type
--------
+== Install Arche Type
 
 To package and install the arche type, run:
 
+[source,java]
+----
 mvn clean install 
-
+----
 
 

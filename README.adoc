@@ -1,0 +1,53 @@
+= Teiid Tools
+
+This project contains tools to help with Teiid development tasks.  These tools are currently related to the extending Teiid features that are described in the https://teiid.gitbooks.io/documents/content/dev/Developers_Guide.html [Developers Guide]
+
+To contribute the teiid tools, goto http://github.com/teiid/teiid-tools.
+
+NOTE: **Ask Us** - Ask us any questions you have on this Quick Start or any other Teiid related questions on https://community.jboss.org/en/teiid?view=discussions[Teiid Forums].
+
+== Teiid Extension Points
+
+The following projects can be used to build and install their respective archetype.   The purpose of the archetype is to quickly build a java project so that the developer can begin adding their custom code.  Additionally, the default projects that are built from the archetype, come with with resources to enable immediate packaging for deployment.
+
+*  Connector - project for creating the link:arche-types/connector-archetype/README.adoc[Connector Archetype] 
+
+*  Translator - project for creating the link:arche-types/translator-archetype/README.adoc[Translator Archetype] 
+
+*  User Defined Function - project for creating the link:arche-types/udf-archetype/README.adoc[UDF Archetype] 
+
+*  PreParser - project for creating the link:arche-types/preparser-archetype/README.adoc[PreParser Archetype] 
+
+
+== System Requirements
+
+To run these quickstarts with the provided build scripts, you need the following:
+
+1.  Java 1.7 or latter, to run {{ book.asName }} and Maven. You can choose from the following:
+* OpenJDK
+* Oracle Java SE
+* Oracle JRockit
+
+2.  Maven 3.0.0 or newer, to build and deploy the examples
+* If you have not yet installed Maven, see the http://maven.apache.org/guides/getting-started/index.html[Maven Getting Started Guide] for details.
+* If you have installed Maven, you can check the version by typing the following in a command line:
+
+
+== Build Teiid Tools Project
+
+Get project:
+
+[source,java]
+----
+-   run: git clone git@github.com:teiid/teiid-tools.git
+----
+
+
+Build project (install archetypes):
+
+[source,java]
+----
+-   run:  mvn -s ./settings clean install
+----
+
+See the respective tool for a specific example.
