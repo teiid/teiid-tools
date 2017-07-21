@@ -24,7 +24,8 @@
         <connection>scm:git:git://github.com/teiid/teiid-tools.git</connection>
         <developerConnection>scm:git:git@github.com:teiid/teiid-tools.git</developerConnection>
         <url>http://github.com/teiid/teiid-tools</url>
-    </scm>
+      <tag>HEAD</tag>
+  </scm>
 
     <licenses>
         <license>
