@@ -36,8 +36,15 @@
     <fileSet filtered="true" packaged="false">
       <directory>kits</directory>
       <includes>
+        <include>*.*</include>
+        <include>wildfly/docs/**/*.*</include>
+      </includes>
+    </fileSet>              
+    <fileSet filtered="true" packaged="true">
+      <directory>kits/wildfly/modules</directory>
+      <includes>
         <include>**/*.*</include>
-      </includes>      
+      </includes>
     </fileSet>          
   </fileSets>
 </archetype-descriptor>

@@ -29,7 +29,7 @@
          </fileSet>        
         <fileSet>
             <directory>${project.build.directory}/rar-unpack</directory>
-            <outputDirectory>${wildfly-module-root}/org/jboss/teiid/resource-adapter/${connector-type}/main</outputDirectory>
+            <outputDirectory>${wildfly-module-root}/${packageInPathFormat}/main</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>

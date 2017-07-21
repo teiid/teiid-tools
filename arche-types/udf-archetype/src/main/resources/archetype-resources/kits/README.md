@@ -11,10 +11,9 @@ When the udf project is generated, you will end up with the following structure:
 			|-	cli-scripts
 				|-	add-module-__udf-name__.cli
 			|-	modules
-				|-	${module-location}
-					|-	__udf-name__
-						|-	main
-							|-	module.xml
+				|-	${package}
+					|-	main
+						|-	module.xml
 		|-	wildfly-dist.xml 
 	| -	pom.xml
 	| -	src

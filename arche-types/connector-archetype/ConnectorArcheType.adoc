@@ -19,10 +19,10 @@ After the arche type is installed, then to generate a connector project, do the 
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
-  -DarchetypeVersion=9.0.0               \
+  -DarchetypeVersion=${archetypeVersion}               \
   -DgroupId=${groupId}   				\
   -DartifactId=connector-${connector-type}	\
-  -Dpackage=org.teiid.resource.adapter.${connector-type}    \
+  -Dpackage=${package}    \
   -Dversion=${version}    \
   -Dconnector-type=${connector-type}   \
   -Dconnector-name=${connector-name}   \
@@ -56,14 +56,14 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                   \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=connector-archetype  \
-  -DarchetypeVersion=9.0.0  \
-  -DgroupId=org.jboss.teiid.connectors  \
-  -Dpackage=org.teiid.resource.adapter.mytype \
-  -DartifactId=connector-mytype	\
+  -DarchetypeVersion=9.0.1  \
+  -DgroupId=org.example  \
+  -Dpackage=org.example.adapter.type \
+  -DartifactId=adapter-type	\
   -Dversion=0.0.1-SNAPSHOT    \
-  -Dconnector-type=mytype   \
-  -Dconnector-name=MyType   \
-  -Dvendor-name=MyVendor	\
+  -Dconnector-type=type   \
+  -Dconnector-name=Type   \
+  -Dvendor-name=Vendor	\
   -Dteiid-version=9.0.0.Final
 
 
@@ -71,13 +71,13 @@ mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/n
 When executed, you will be asked to confirm the package property
 
 Confirm properties configuration:
-groupId: org.jboss.teiid.connectors
-artifactId: connector-mytype
+groupId: org.example
+artifactId: adapter-type
 version: 0.0.1-SNAPSHOT
-package: org.teiid.resource.adapter.mytype
-connector-type: mytype
-connector-name: MyType
-vendor-name: MyVendor
+package: org.example.adapter.type
+connector-type: type
+connector-name: Type
+vendor-name: Vendor
 teiid-version: 9.0.0.Final
  Y: : 
 

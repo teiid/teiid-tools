@@ -13,7 +13,8 @@ import org.teiid.logging.LogConstants;
 
 /**
  * Connection to the resource. You must define ${connector-name}Connection interface, that 
- * extends the "javax.resource.cci.Connection"
+ * extends the "javax.resource.cci.Connection".  If a custom translator is also being created,
+ * the Connection interface should be defined in that project or a common project.
  */
 public class ${connector-name}ConnectionImpl extends BasicConnection implements ${connector-name}Connection {
 

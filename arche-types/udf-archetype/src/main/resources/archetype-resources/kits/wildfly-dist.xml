@@ -31,7 +31,7 @@
   
   <dependencySets>
     <dependencySet>
-      <outputDirectory>modules/org/teiid/udf/${udf-name}/main</outputDirectory>
+      <outputDirectory>modules/${packageInPathFormat}/main</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <includes>
         <include>${groupId}:${artifactId}</include>

@@ -18,10 +18,10 @@ After the arche type is installed, then to generate a translator project, do the
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=udf-archetype          \
-  -DarchetypeVersion=9.0.0     \
+  -DarchetypeVersion=${archetypeVersion}     \
   -DgroupId=${groupId}   				\
   -DartifactId=${udf-artifact-id}	\
-  -Dpackage=${packageName}    \
+  -Dpackage=${package}    \
   -Dversion=0.0.1-SNAPSHOT      \
   -Dudf-name=${functionName}  \
   -Dmethod-name=${methodName}      \
@@ -59,37 +59,37 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=udf-archetype          \
-  -DarchetypeVersion=9.0.0     \
-  -DgroupId=org.teiid.udf   \
-  -DartifactId=udf-myFunction    \
-  -Dpackage=org.teiid.udf    \
+  -DarchetypeVersion=9.0.1     \
+  -DgroupId=org.example   \
+  -DartifactId=udf-function    \
+  -Dpackage=org.example.function    \
   -Dversion=0.0.1-SNAPSHOT      \
-  -Dudf-name=myFunction \
-  -Dmethod-name=myFunction      \
+  -Dudf-name=Function \
+  -Dmethod-name=function      \
   -Dmethod-args='String arg1'   \
   -Dreturn-type=String
 ----
 
 When executed, you will be asked to confirm the package property
 
-[INFO] Archetype repository not defined. Using the one from [org.jboss.teiid.arche-types:udf-archetype:9.0.0] found in catalog local
-[INFO] Using property: groupId = org.teiid.udf
-[INFO] Using property: artifactId = udf-myFunction
+[INFO] Archetype repository not defined. Using the one from [org.jboss.teiid.arche-types:udf-archetype:9.0.1] found in catalog local
+[INFO] Using property: groupId = org.example
+[INFO] Using property: artifactId = udf-function
 [INFO] Using property: version = 0.0.1-SNAPSHOT
-[INFO] Using property: package = org.teiid.udf
+[INFO] Using property: package = org.example.function
 [INFO] Using property: method-args = String arg1
-[INFO] Using property: method-name = myFunction
+[INFO] Using property: method-name = function
 [INFO] Using property: return-type = String
-[INFO] Using property: udf-name = myFunction
+[INFO] Using property: udf-name = Function
 Confirm properties configuration:
-groupId: org.teiid.udf
-artifactId: udf-myFunction
+groupId: org.example
+artifactId: udf-function
 version: 0.0.1-SNAPSHOT
-package: org.teiid.udf
+package: org.example.function
 method-args: String arg1
-method-name: myFunction
+method-name: function
 return-type: String
-udf-name: myFunction
+udf-name: Function
  Y: : y
 
 

@@ -1,5 +1,0 @@
-/subsystem=resource-adapters/resource-adapter=${connector-type}:add(module=org.jboss.teiid.resource-adapter.${connector-type})
-/subsystem=resource-adapters/resource-adapter=${connector-type}/connection-definitions=${connector-type}DS:add(jndi-name="java:/${connector-type}DS", class-name=org.teiid.resource.adapter.${connector-type}.${connector-name}ManagedConnectionFactory, enabled="true", use-java-context="true")
-#/subsystem=resource-adapters/resource-adapter=${connector-type}/connection-definitions=${connector-type}DS/config-properties=propertyName:add(value="propertyValue")
-/subsystem=resource-adapters/resource-adapter=${connector-type}:activate
-

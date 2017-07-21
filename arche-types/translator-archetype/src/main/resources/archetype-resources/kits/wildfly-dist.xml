@@ -31,7 +31,7 @@
   
   <dependencySets>
     <dependencySet>
-      <outputDirectory>${wildfly-module-root}/org/jboss/teiid/translator/${translator-type}/main</outputDirectory>
+      <outputDirectory>${wildfly-module-root}/${packageInPathFormat}/main</outputDirectory>
       <useTransitiveDependencies>false</useTransitiveDependencies>
       <includes>
         <include>${groupId}:${artifactId}</include>

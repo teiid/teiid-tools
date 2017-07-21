@@ -9,15 +9,14 @@ When the translator project is generated, you will end up with the following str
 	|-	kits
 		|-	wildfly
 			|-	docs
-				|-	teiid
+				|-	teiid-extensions
 					|-	datasources
 						|-	${translator-type}	
 							|-	add-translator-${translator-type}.cli
 			|-	modules
-				|-	${module-location}
-					|-	${translator-type}
-						|-	main
-							|-	module.xml
+				|-	${package}
+					|-	main
+						|-	module.xml
 		|-	wildfly-dist.xml 
 	| -	pom.xml
 	| -	src

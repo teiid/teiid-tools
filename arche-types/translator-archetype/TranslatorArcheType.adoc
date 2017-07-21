@@ -20,10 +20,10 @@ After the arche type is installed, then to generate a translator project, do the
 mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=translator-archetype          \
-  -DarchetypeVersion=9.0.0               \
+  -DarchetypeVersion=${archetypeVersion}               \
   -DgroupId=${groupId}   				\
   -DartifactId=translator-${translator-type}	\
-  -Dpackage=org.teiid.translator.${translator-type}    \
+  -Dpackage=${package}    \
   -Dversion=${version}    \
   -Dtranslator-type=${translator-type}   \
   -Dtranslator-name=${translator-name}
@@ -59,26 +59,26 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 mvn archetype:generate   -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=translator-archetype  \
-  -DarchetypeVersion=9.0.0  \
-  -DgroupId=org.jboss.teiid.connectors  \
-  -DartifactId=translator-myType  \
-  -Dpackage=org.teiid.translator.myType    \
+  -DarchetypeVersion=9.0.1  \
+  -DgroupId=org.example  \
+  -DartifactId=translator-type  \
+  -Dpackage=org.example.translator.type    \
   -Dversion=0.0.1-SNAPSHOT	\
-  -Dtranslator-type=mytype  \
-  -Dtranslator-name=MyType  \
+  -Dtranslator-type=type  \
+  -Dtranslator-name=Type  \
   -Dteiid-version=9.0.0.Final
 ----
 
 When executed, you will be asked to confirm the package property
 
 Confirm properties configuration:
-groupId: org.jboss.teiid.connector
-artifactId: translator-mtype
+groupId: org.example
+artifactId: translator-type
 version: 0.0.1-SNAPSHOT
-package: org.teiid.translator.mytype
+package: org.example.translator.type
 teiid-version: 9.0.0.Final
-translator-name: MyType
-translator-type: mytype
+translator-name: Type
+translator-type: type
  Y: : y
 
 

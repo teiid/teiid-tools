@@ -2,10 +2,10 @@
  #  replacing your values for the properties to configure the cache
  
                 <resource-adapter id="${connector-type}DS">
-                    <module slot="main" id="org.jboss.teiid.resource-adapter.${connector-type}"/>
+                    <module slot="main" id="${package}"/>
                     <transaction-support>NoTransaction</transaction-support>
                     <connection-definitions>
-                        <connection-definition class-name="org.teiid.resource.adapter.${connector-type}.${connector-name}ManagedConnectionFactory" jndi-name="java:/${connector-type}DS" enabled="true" use-java-context="true" pool-name="${connector-type}DS">
+                        <connection-definition class-name="${package}.${connector-name}ManagedConnectionFactory" jndi-name="java:/${connector-type}DS" enabled="true" use-java-context="true" pool-name="${connector-type}DS">
                             <!--config-property name="propertyName">
                                 propertyValue
                             </config-property-->

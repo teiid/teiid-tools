@@ -1,18 +1,18 @@
-TEIID UDF Arche Type
+TEIID Preparser Arche Type
 ================
 
-This maven project is use to create the TEIID UDF archetype, which then can be used to generate a new java project.
+This maven project is use to create the TEIID Preparser archetype, which then can be used to generate a new java project.
 
-When the udf project is generated, you will end up with the following structure:
+When the preparser project is generated, you will end up with the following structure:
 
--  ${udf_artifactID}
+-  ${preparser_artifactID}
 	|-	kits
 		|-	wildfly
 			|-	cli-scripts
-				|-	add-module-__udf-name__.cli
+				|-	add-module-__preparser-name__.cli
 			|-	modules
-				|-	${module-location}
-					|-	__udf-name__
+				|-	${package}
+					|-	__preparser-name__
 						|-	main
 							|-	module.xml
 		|-	wildfly-dist.xml 
@@ -21,6 +21,6 @@ When the udf project is generated, you will end up with the following structure:
 		|-	main
 			|-	java
 				|-	${package}
-					|-	__udf-name__.java
+					|-	__preparser-name__.java
 
 

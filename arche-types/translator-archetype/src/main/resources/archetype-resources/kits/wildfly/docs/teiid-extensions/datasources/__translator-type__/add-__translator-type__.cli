@@ -1,0 +1,3 @@
+/subsystem=teiid/translator=${translator-type}:add(module=${package})
+
+

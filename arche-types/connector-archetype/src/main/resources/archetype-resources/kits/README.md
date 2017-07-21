@@ -9,16 +9,15 @@ When the project is generated, you should have ended up with the following struc
 	|-	kits
 		|-	wildfly
 			|-	docs
-				|-	teiid
+				|-	teiid-extensions
 					|-	datasources
 						|-	${connector-type}	
 							|-	${connector-type}-ds.cli
 							|-  ${connector-type}-ds.xml		
 			|-	modules
-				|-	${module-location}
-					|-	${connector-type}
-						|-	main
-							|-	module.xml
+				|-	${package}
+					|-	main
+						|-	module.xml
 		|-	wildfly-dist.xml 
 	| -	pom.xml
 	| -	src
