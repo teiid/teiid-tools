@@ -17,7 +17,7 @@ After the arche type is installed, then to generate a translator project, do the
 
 [source,java]
 ----
-mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+mvn archetype:generate               \
   -DarchetypeGroupId=org.jboss.teiid.arche-types               \
   -DarchetypeArtifactId=translator-archetype          \
   -DarchetypeVersion=${archetypeVersion}               \
@@ -56,7 +56,7 @@ mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org
 
 [source,java]
 ----
-mvn archetype:generate   -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+mvn archetype:generate                    \
   -DarchetypeGroupId=org.jboss.teiid.arche-types   \
   -DarchetypeArtifactId=translator-archetype  \
   -DarchetypeVersion=9.0.1  \
@@ -69,7 +69,7 @@ mvn archetype:generate   -DarchethypeRepository=https://repository.jboss.org/nex
   -Dteiid-version=9.0.0.Final
 ----
 
-When executed, you will be asked to confirm the package property
+When executed, you will be asked to confirm the properties
 
 Confirm properties configuration:
 groupId: org.example

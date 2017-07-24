@@ -16,7 +16,7 @@ After the arche type is installed, then to generate a connector project, do the 
 * TEMPLATE
 ***********
 
-mvn archetype:generate       -DarchethypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                                \
+mvn archetype:generate       \
   -DarchetypeGroupId=org.jboss.teiid.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
   -DarchetypeVersion=${archetypeVersion}               \
@@ -82,16 +82,10 @@ teiid-version: 9.0.0.Final
  Y: : 
 
 
-type Y (yes) and press enter, and the creation of the translator project will be done
+type Y (yes) and press enter, and the creation of the connector project will be done
 
+Upon creation, a directory based on the _*artifactId*_ will be created, that will contain the project. Note: The project will not compile because the $\{connector-name}Connection interface in the ConnectionImpl has not been added as a dependency in the pom.xml. This will need to be done.
 
-== Install Arche Type
-
-To package and install the arche type, run:
-
-[source,java]
-----
-mvn clean install 
-----
+Now you are ready to start adding your custom code.
 
 
