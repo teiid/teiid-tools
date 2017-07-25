@@ -11,22 +11,22 @@
       <packaging>jar</packaging>
 
     <properties>
-        <version.org.jboss.teiid>${teiid-version}</version.org.jboss.teiid>
+        <version.org.teiid>${teiid-version}</version.org.teiid>
         <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
         <version.junit.junit>3.8.1</version.junit.junit>
         <wildfly-module-root>modules</wildfly-module-root>
     </properties> 
       <dependencies>
             <dependency>
-                <groupId>org.jboss.teiid</groupId>
+                <groupId>org.teiid</groupId>
                 <artifactId>teiid-api</artifactId>
-                <version>${version.org.jboss.teiid}</version>
+                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.jboss.teiid</groupId>
+                <groupId>org.teiid</groupId>
                 <artifactId>teiid-common-core</artifactId>
-                <version>${version.org.jboss.teiid}</version>
+                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
