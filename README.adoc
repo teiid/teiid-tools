@@ -47,7 +47,7 @@ Build project (install archetypes):
 
 [source,java]
 ----
--   run:  mvn -s ./settings clean install
+-   run:  mvn clean install
 ----
 
 See the respective tool for a specific example.

@@ -5,7 +5,7 @@
       <defaultValue>classname</defaultValue>
     </requiredProperty>
     <requiredProperty key="teiid-version" >
-      <defaultValue>9.0.0.Final</defaultValue>
+      <defaultValue>10.2.0</defaultValue>
     </requiredProperty> 
   </requiredProperties>
   <fileSets>

@@ -2,6 +2,7 @@
 
 This maven project is use to create the TEIID Translator archetype, which then can be used to generate a new translator project.
 
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type
 
 == Generate Project
 
@@ -18,7 +19,7 @@ After the arche type is installed, then to generate a translator project, do the
 [source,java]
 ----
 mvn archetype:generate               \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types               \
+  -DarchetypeGroupId=org.teiid.arche-types               \
   -DarchetypeArtifactId=translator-archetype          \
   -DarchetypeVersion=${archetypeVersion}               \
   -DgroupId=${groupId}   				\
@@ -57,16 +58,16 @@ mvn archetype:generate               \
 [source,java]
 ----
 mvn archetype:generate                    \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types   \
+  -DarchetypeGroupId=org.teiid.arche-types   \
   -DarchetypeArtifactId=translator-archetype  \
-  -DarchetypeVersion=9.0.1  \
+  -DarchetypeVersion=10.0.0  \
   -DgroupId=org.example  \
   -DartifactId=translator-type  \
   -Dpackage=org.example.translator.type    \
   -Dversion=0.0.1-SNAPSHOT	\
   -Dtranslator-type=type  \
   -Dtranslator-name=Type  \
-  -Dteiid-version=9.0.0.Final
+  -Dteiid-version=10.2.0
 ----
 
 When executed, you will be asked to confirm the properties
@@ -76,7 +77,7 @@ groupId: org.example
 artifactId: translator-type
 version: 0.0.1-SNAPSHOT
 package: org.example.translator.type
-teiid-version: 9.0.0.Final
+teiid-version: 10.2.0
 translator-name: Type
 translator-type: type
  Y: : y

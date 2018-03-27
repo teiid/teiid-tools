@@ -2,6 +2,7 @@
 
 This maven project will be created when the Teiid Connector Archetype is generated.  
 
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type
 
 == Generate Project
 
@@ -17,7 +18,7 @@ After the arche type is installed, then to generate a connector project, do the 
 ***********
 
 mvn archetype:generate       \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types                \
+  -DarchetypeGroupId=org.teiid.arche-types                \
   -DarchetypeArtifactId=connector-archetype          \
   -DarchetypeVersion=${archetypeVersion}               \
   -DgroupId=${groupId}   				\
@@ -53,10 +54,10 @@ mvn archetype:generate       \
 
 -  this is an example of the template that can be run:
 
-mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/nexus/content/repositories/releases/                   \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types   \
+mvn archetype:generate       \
+  -DarchetypeGroupId=org.teiid.arche-types   \
   -DarchetypeArtifactId=connector-archetype  \
-  -DarchetypeVersion=9.0.1  \
+  -DarchetypeVersion=10.0.0  \
   -DgroupId=org.example  \
   -Dpackage=org.example.adapter.type \
   -DartifactId=adapter-type	\
@@ -64,7 +65,7 @@ mvn archetype:generate      -DarchetypeRepository=https://repository.jboss.org/n
   -Dconnector-type=type   \
   -Dconnector-name=Type   \
   -Dvendor-name=Vendor	\
-  -Dteiid-version=9.0.0.Final
+  -Dteiid-version=10.2.0
 
 
 
@@ -78,7 +79,7 @@ package: org.example.adapter.type
 connector-type: type
 connector-name: Type
 vendor-name: Vendor
-teiid-version: 9.0.0.Final
+teiid-version: 10.2.0
  Y: : 
 
 
@@ -87,5 +88,7 @@ type Y (yes) and press enter, and the creation of the connector project will be 
 Upon creation, a directory based on the _*artifactId*_ will be created, that will contain the project. Note: The project will not compile because the $\{connector-name}Connection interface in the ConnectionImpl has not been added as a dependency in the pom.xml. This will need to be done.
 
 Now you are ready to start adding your custom code.
+
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type 
 
 

@@ -2,10 +2,11 @@
 
 This maven project is use to create the TEIID PrePaser archetype, which then can be used to generate a new java project for developing a Preparser.
 
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type
 
 == Generate Project
 
-After the arche type is installed (or use the nexus repostiory), then to generate a project, do the following:
+After the arche type is installed (or use the nexus repository), then to generate a project, do the following:
 
 -  use the following template to generate the project:
 
@@ -17,7 +18,7 @@ After the arche type is installed (or use the nexus repostiory), then to generat
 ----
 
 mvn archetype:generate               \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types               \
+  -DarchetypeGroupId=org.teiid.arche-types               \
   -DarchetypeArtifactId=preparser-archetype          \
   -DarchetypeVersion=${archetypeVersion}     \
   -DgroupId=${groupId}   				\
@@ -41,7 +42,7 @@ mvn archetype:generate               \
   -Dpackage		-  (user defined) the package structure where the java, module and resource files will be created
   -Dversion		-  (user defined) the version that the new connector project pom.xml will be
   -Dclass-name    	-  (user defined) the class name to give the new user preparser, will become the Class Name 
-  -Dteiid-version       -  Optional, defaults to 9.0.0.Final
+  -Dteiid-version       -  Optional, defaults to 10.2.0
 ----
 
 *********
@@ -53,15 +54,15 @@ mvn archetype:generate               \
 [source,java]
 ----
 mvn archetype:generate                          \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types               \
+  -DarchetypeGroupId=org.teiid.arche-types               \
   -DarchetypeArtifactId=preparser-archetype          \
-  -DarchetypeVersion=9.0.1     \
+  -DarchetypeVersion=10.0.0     \
   -DgroupId=org.example   \
   -DartifactId=preparser-mypreparser    \
   -Dpackage=org.example.mypreparser    \
   -Dversion=0.0.1-SNAPSHOT      \
   -Dclass-name=MyPreParser      \
-  -Dteiid-version=9.0.0.Final
+  -Dteiid-version=10.2.0
 ----
 
 When executed, you will be asked to confirm the package property
@@ -73,14 +74,14 @@ When executed, you will be asked to confirm the package property
 [INFO] Using property: version = 0.0.1-SNAPSHOT
 [INFO] Using property: package = org.example.mypreparser
 [INFO] Using property: class-name = MyPreParser
-[INFO] Using property: teiid-version = 9.0.0.Final
+[INFO] Using property: teiid-version = 10.2.0
 Confirm properties configuration:
 groupId: org.teiid.preparser
 artifactId: preparser-myParser
 version: 0.0.1-SNAPSHOT
 package: org.example.mypreparser
 class-name: MyPreParser
-teiid-version: 9.0.0.Final
+teiid-version: 10.2.0
  Y: : y
 ----
 

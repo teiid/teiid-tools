@@ -2,6 +2,7 @@
 
 This maven project is use to create the TEIID UDF archetype, which then can be used to generate a new java project for developing a UDF.
 
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type
 
 == Generate Project
 
@@ -16,7 +17,7 @@ After the arche type is installed, then to generate a translator project, do the
 [source,java]
 ----
 mvn archetype:generate                         \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types               \
+  -DarchetypeGroupId=org.teiid.arche-types               \
   -DarchetypeArtifactId=udf-archetype          \
   -DarchetypeVersion=${archetypeVersion}     \
   -DgroupId=${groupId}   				\
@@ -57,9 +58,9 @@ mvn archetype:generate                         \
 [source,java]
 ----
 mvn archetype:generate                           \
-  -DarchetypeGroupId=org.jboss.teiid.arche-types               \
+  -DarchetypeGroupId=org.teiid.arche-types               \
   -DarchetypeArtifactId=udf-archetype          \
-  -DarchetypeVersion=9.0.1     \
+  -DarchetypeVersion=10.0.0     \
   -DgroupId=org.example   \
   -DartifactId=udf-function    \
   -Dpackage=org.example.function    \
@@ -72,7 +73,7 @@ mvn archetype:generate                           \
 
 When executed, you will be asked to confirm the package property
 
-[INFO] Archetype repository not defined. Using the one from [org.jboss.teiid.arche-types:udf-archetype:9.0.1] found in catalog local
+[INFO] Archetype repository not defined. Using the one from [org.teiid.arche-types:udf-archetype:10.0.0] found in catalog local
 [INFO] Using property: groupId = org.example
 [INFO] Using property: artifactId = udf-function
 [INFO] Using property: version = 0.0.1-SNAPSHOT
