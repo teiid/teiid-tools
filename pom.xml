@@ -6,7 +6,7 @@
     <artifactId>teiid-tools</artifactId>
     <packaging>pom</packaging>
     <name>Teiid Tools</name>
-    <version>9.0.2-SNAPSHOT</version>
+    <version>9.0.2</version>
 
     <description>Teiid tools to assist in development task.</description>
     <properties>
@@ -24,7 +24,7 @@
         <connection>scm:git:git://github.com/teiid/teiid-tools.git</connection>
         <developerConnection>scm:git:git@github.com:teiid/teiid-tools.git</developerConnection>
         <url>http://github.com/teiid/teiid-tools</url>
-      <tag>HEAD</tag>
+      <tag>v9.0.2</tag>
   </scm>
 
     <licenses>
