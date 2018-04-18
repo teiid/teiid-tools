@@ -2,7 +2,7 @@
 
 This maven project will be created when the Teiid Connector Archetype is generated.  
 
-Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jboss.teiid.arche-type
 
 == Generate Project
 
@@ -89,6 +89,6 @@ Upon creation, a directory based on the _*artifactId*_ will be created, that wil
 
 Now you are ready to start adding your custom code.
 
-Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type 
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jboss.teiid.arche-type 
 
 

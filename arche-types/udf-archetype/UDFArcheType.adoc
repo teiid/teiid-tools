@@ -2,7 +2,7 @@
 
 This maven project is use to create the TEIID UDF archetype, which then can be used to generate a new java project for developing a UDF.
 
-Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jbossteiid.arche-type
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jboss.teiid.arche-type
 
 == Generate Project
 
