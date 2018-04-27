@@ -1,6 +1,6 @@
 = Teiid Tools
 
-This project contains tools to help with Teiid development tasks.  These tools are currently related to the extending Teiid features that are described in the https://teiid.gitbooks.io/documents/content/dev/Developers_Guide.html [Developers Guide]
+This project contains tools to help with Teiid development tasks.  These tools are currently related to the extending Teiid features that are described in the http://teiid.github.io/teiid-documents/master/content/dev/Developers_Guide.html [Developers Guide]
 
 To contribute the teiid tools, goto http://github.com/teiid/teiid-tools.
 
