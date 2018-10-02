@@ -1,0 +1,42 @@
+<!--This script builds a zip for Teiid Server Installation -->
+<assembly>
+  
+  <id>wildfly-dist</id>
+  
+  <formats>
+    <format>zip</format>
+  </formats>
+  
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <baseDirectory>modules</baseDirectory>
+
+ <fileSets>
+    <fileSet>
+        <directory>kits/wildfly/modules</directory>
+        <outputDirectory>modules</outputDirectory>     
+        <filtered>true</filtered> 
+        <includes>
+          <include>**/*</include>
+        </includes>   
+    </fileSet>   
+    <fileSet>
+        <directory>kits/wildfly/cli-scripts</directory>
+        <outputDirectory>cli-scripts</outputDirectory> 
+        <filtered>true</filtered> 
+        <includes>
+          <include>**/*</include>
+        </includes>   
+    </fileSet>       
+  </fileSets>
+  
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>modules/${packageInPathFormat}/main</outputDirectory>
+      <useTransitiveDependencies>false</useTransitiveDependencies>
+      <includes>
+        <include>${groupId}:${artifactId}</include>
+      </includes>
+    </dependencySet>
+  </dependencySets>  
+  
+</assembly>

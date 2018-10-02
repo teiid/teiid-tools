@@ -18,6 +18,7 @@ The following projects can be used to build and install their respective archety
 
 *  PreParser - project for creating the link:arche-types/preparser-archetype/README.adoc[PreParser Archetype] 
 
+*  CustomMetadataReposiroty - project for creating the link:arche-types/custommetadatarepository-archetype/README.adoc[CustomMetadataRepository Archetype]
 
 == System Requirements
 

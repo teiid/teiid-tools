@@ -1,0 +1,89 @@
+= TEIID PreParse Arche Type
+
+This maven project is use to create the TEIID CustomMetadataRepository archetype, which then can be used to generate a new java project for developing a Custom Metadata Repository.
+
+Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jboss.teiid.arche-type
+
+== Generate Project
+
+After the arche type is installed (or use the nexus repository), then to generate a project, do the following:
+
+-  use the following template to generate the project:
+
+***********
+* TEMPLATE
+***********
+  
+[source,java]
+----
+
+mvn archetype:generate               \
+  -DarchetypeGroupId=org.teiid.arche-types               \
+  -DarchetypeArtifactId=custommetadatarepository-archetype          \
+  -DarchetypeVersion=${archetypeVersion}     \
+  -DgroupId=${groupId}   				\
+  -DartifactId=${custommetadatarepository-artifact-id}	\
+  -Dpackage=${package}    \
+  -Dversion=0.0.1-SNAPSHOT      \
+  -Dclass-name=${className}     \
+  -Dteiid-version=${teiidVersion}
+----
+
+********
+* where:
+********
+[source,java]
+----
+  -DarchetypeGroupId    -  is the group ID for the arche type to use to generate
+  -DarchetypeArtifactId -  is the artifact ID for the arche type to use to generate
+  -DarchetypeVersion	-  is the version for the arche type to use to generate
+  -DgroupId		-  (user defined) group ID for the new custom metadata repository project pom.xml
+  -DartifactId		-  (user defined) artifact ID for the new example project pom.xml
+  -Dpackage		-  (user defined) the package structure where the java, module and resource files will be created
+  -Dversion		-  (user defined) the version that the new connector project pom.xml will be
+  -Dclass-name    	-  (user defined) the class name to give the new user custom metadata repository, will become the Class Name
+  -Dteiid-version       -  Optional, defaults to 10.2.0
+----
+
+*********
+* EXAMPLE
+*********
+
+-  this is an example of the template that can be run:
+
+[source,java]
+----
+mvn archetype:generate                          \
+  -DarchetypeGroupId=org.teiid.arche-types               \
+  -DarchetypeArtifactId=custommetadatarepository-archetype          \
+  -DarchetypeVersion=10.0.0     \
+  -DgroupId=org.example   				\
+  -DartifactId=custommetadatarepository-myrepository    \
+  -Dpackage=org.example.myrepostory    \
+  -Dversion=0.0.1-SNAPSHOT      \
+  -Dclass-name=MyCustomMetadataRepository      \
+  -Dteiid-version=10.2.0
+----
+
+When executed, you will be asked to confirm the package property
+
+[source,java]
+----
+[INFO] Using property: groupId = org.example
+[INFO] Using property: artifactId = custommetadatarepository-mycustommetadatarepository
+[INFO] Using property: version = 0.0.1-SNAPSHOT
+[INFO] Using property: package = org.example.mycustommetadatarepository
+[INFO] Using property: class-name = MyCustomMetadataRepository
+[INFO] Using property: teiid-version = 10.2.0
+Confirm properties configuration:
+groupId: org.teiid.metadata.MetadataRepository
+artifactId: custommetadatarepository-myCustomDataRepository
+version: 0.0.1-SNAPSHOT
+package: org.example.mycustommetadatarepository
+class-name: MyCustomMetadataRepository
+teiid-version: 10.2.0
+ Y: : y
+----
+
+type Y (yes) and press enter, and the creation of the custom metadata repository project will be done
+

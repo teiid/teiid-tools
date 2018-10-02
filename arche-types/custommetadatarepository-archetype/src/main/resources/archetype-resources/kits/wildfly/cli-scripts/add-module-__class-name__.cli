@@ -1,0 +1,3 @@
+module add --name=${package} --resources=${artifactId}-${version}.jar --dependencies=javax.api,org.slf4j,org.jboss.teiid.common-core,org.jboss.teiid.api
+
+
