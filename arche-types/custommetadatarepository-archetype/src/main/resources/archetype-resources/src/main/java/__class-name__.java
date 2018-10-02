@@ -30,7 +30,7 @@ import org.teiid.logging.LogConstants;
 *
 **/
 
-public class ${class-name} implements MetadataRepository {
+public class ${class-name} extends MetadataRepository {
 
     public static final BundleUtil UTIL = BundleUtil.getBundleUtil(${class-name}.class);
 
