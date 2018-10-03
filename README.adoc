@@ -18,13 +18,13 @@ The following projects can be used to build and install their respective archety
 
 *  PreParser - project for creating the link:arche-types/preparser-archetype/README.adoc[PreParser Archetype] 
 
-*  CustomMetadataReposiroty - project for creating the link:arche-types/custommetadatarepository-archetype/README.adoc[CustomMetadataRepository Archetype]
+*  MetadataReposiroty - project for creating the link:arche-types/metadatarepository-archetype/README.adoc[MetadataRepository Archetype]
 
 == System Requirements
 
 To run these quickstarts with the provided build scripts, you need the following:
 
-1.  Java 1.7 or latter, to run {{ book.asName }} and Maven. You can choose from the following:
+1.  Java 1.8 or later, to run {{ book.asName }} and Maven. You can choose from the following:
 * OpenJDK
 * Oracle Java SE
 * Oracle JRockit

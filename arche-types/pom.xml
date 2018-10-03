@@ -37,6 +37,7 @@
         <module>connector-archetype</module>
         <module>udf-archetype</module>
         <module>preparser-archetype</module>
+        <module>metadatarepository-archetype</module>
     </modules>
 
     <profiles>
