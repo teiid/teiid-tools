@@ -26,11 +26,11 @@ import org.teiid.core.BundleUtil;
 import org.teiid.logging.LogConstants;
 
 /**
-*  User Defined CustomMetadataRepository: ${class-name}
+*  User Defined MetadataRepository: ${class-name}
 *
 **/
 
-public class ${class-name} extends MetadataRepository {
+public class ${class-name} implements MetadataRepository {
 
     public static final BundleUtil UTIL = BundleUtil.getBundleUtil(${class-name}.class);
 
