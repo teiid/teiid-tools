@@ -17,11 +17,6 @@
  */
 package ${package};
 
-
-import javax.resource.ResourceException;
-import javax.resource.cci.Connection;
-
-
-public interface ${translator-name}Connection extends Connection {
-    void someMethod() throws ResourceException;
+public interface ${translator-name}Connection {
+    void someMethod() throws Exception;
 }

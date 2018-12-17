@@ -20,7 +20,7 @@ package ${package};
 
 import java.util.Arrays;
 
-import javax.resource.cci.ConnectionFactory;
+import org.teiid.resource.api.ConnectionFactory;
 
 import org.teiid.core.types.DataTypeManager;
 import org.teiid.language.QueryExpression;

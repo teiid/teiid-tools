@@ -9,18 +9,27 @@
     <packaging>jar</packaging>
     <properties>
        <version.org.teiid>${teiid-version}</version.org.teiid>
-    </properties>    
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.teiid</groupId>
+                <artifactId>teiid-bom</artifactId>
+                <version>${version.org.teiid}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>    
     <dependencies>
             <dependency>
                 <groupId>org.teiid</groupId>
                 <artifactId>teiid-api</artifactId>
-                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.teiid</groupId>
                 <artifactId>teiid-common-core</artifactId>
-                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
     </dependencies>

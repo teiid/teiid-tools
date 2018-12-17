@@ -1,6 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
+     <parent>
+        <groupId>org.teiid</groupId>
+        <artifactId>teiid-parent</artifactId>
+        <version>${teiid-version}</version>
+      </parent> 
       <modelVersion>4.0.0</modelVersion>
       <groupId>${groupId}</groupId>
       <artifactId>${artifactId}</artifactId>
@@ -12,61 +16,38 @@
 
     <properties>
         <version.org.teiid>${teiid-version}</version.org.teiid>
-        <version.javax.resource.connector.api>1.5</version.javax.resource.connector.api>
-        <version.junit.junit>3.8.1</version.junit.junit>
         <wildfly-module-root>modules</wildfly-module-root>
-    </properties> 
+    </properties>
+     
       <dependencies>
             <dependency>
                 <groupId>org.teiid</groupId>
                 <artifactId>teiid-api</artifactId>
-                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.teiid</groupId>
                 <artifactId>teiid-resource-spi</artifactId>
-                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.teiid</groupId>
                 <artifactId>teiid-common-core</artifactId>
-                <version>${version.org.teiid}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>javax.resource</groupId>
-                <artifactId>connector-api</artifactId>
-                <version>${version.javax.resource.connector.api}</version>
+                <groupId>org.jboss.spec.javax.resource</groupId>
+                <artifactId>jboss-connector-api_1.7_spec</artifactId>
                 <scope>provided</scope>
             </dependency>
             <dependency>
               <groupId>junit</groupId>
               <artifactId>junit</artifactId>
-              <version>${version.junit.junit}</version>
               <scope>test</scope>
             </dependency>
       </dependencies>  
  	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<executions>
-					<execution>
-						<id>bundle</id>
-						<phase>process-classes</phase>
-						<goals>
-							<goal>bundle</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<classifier>lib</classifier>
-				</configuration>
-			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-rar-plugin</artifactId>
