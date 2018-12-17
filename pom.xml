@@ -11,11 +11,6 @@
     <description>Teiid tools to assist in development task.</description>
 	<properties>
 		<site.url>http://www.jboss.org/teiid</site.url>
-
-		<version.org.jboss.integration-platform>6.0.0.CR30</version.org.jboss.integration-platform>
-		<version.teiid>10.2.0</version.teiid>
-		<version.junit>4.11</version.junit>
-		<version.org.mockito>1.9.5</version.org.mockito>
 		<version.maven.archetype>2.4</version.maven.archetype>
 	</properties>
 
@@ -109,41 +104,6 @@
     </modules>
     
     <dependencyManagement>
-	<dependencies>
-		
-           <dependency>
-            	<groupId>org.jboss.integration-platform</groupId>
-            	<artifactId>jboss-integration-platform-bom</artifactId>
-            	<version>${version.org.jboss.integration-platform}</version>
-            	<scope>import</scope>
-            	<type>pom</type>
-          </dependency> 			
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${version.junit}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>${version.org.mockito}</version>
-            </dependency> 
-		<dependency>
-			<groupId>org.teiid</groupId>
-			<artifactId>teiid-common-core</artifactId>
-			<version>${version.teiid}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.teiid</groupId>
-			<artifactId>teiid-client</artifactId>
-			<version>${version.teiid}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.teiid</groupId>
-			<artifactId>teiid</artifactId>
-			<version>${version.teiid}</version>
-			<classifier>jdbc</classifier>
-		</dependency>	
-         </dependencies>      
+	      
     </dependencyManagement>	    
 </project>
