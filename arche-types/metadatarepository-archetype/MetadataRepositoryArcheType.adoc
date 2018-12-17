@@ -2,7 +2,7 @@
 
 This maven project is use to create the TEIID MetadataRepository archetype, which then can be used to generate a new java project for developing a Custom Metadata Repository.
 
-Teiid 10.0+ should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jboss.teiid.arche-type
+Teiid 12.0+ should use archetypeVersion 12.0.0+ with archetypeGroupId org.teiid.arche-types. Teiid 10/11 should use archetypeVersion 10.0.0+ with archetypeGroupId org.teiid.arche-types.  Teiid 8.x and 9.x should use archetypeVersion 9.0.1+ and archetypeGroupId org.jboss.teiid.arche-type
 
 == Generate Project
 

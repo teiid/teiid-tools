@@ -25,6 +25,12 @@
             </dependency>
             <dependency>
                 <groupId>org.teiid</groupId>
+                <artifactId>teiid-resource-spi</artifactId>
+                <version>${version.org.teiid}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.teiid</groupId>
                 <artifactId>teiid-common-core</artifactId>
                 <version>${version.org.teiid}</version>
                 <scope>provided</scope>

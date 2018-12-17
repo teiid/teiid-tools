@@ -25,12 +25,6 @@
             <version>${version.org.teiid}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>javax.resource</groupId>
-            <artifactId>connector-api</artifactId>
-            <version>${version.javax.resource.connector.api}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
     <build>
