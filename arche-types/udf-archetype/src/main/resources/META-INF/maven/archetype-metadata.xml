@@ -13,6 +13,9 @@
     <requiredProperty key="method-args" >
       <defaultValue>String arg0</defaultValue>
     </requiredProperty>
+    <requiredProperty key="teiid-version" >
+      <defaultValue>TeiidVersion</defaultValue>
+    </requiredProperty>
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true" packaged="true">

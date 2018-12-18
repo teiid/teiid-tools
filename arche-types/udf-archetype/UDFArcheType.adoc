@@ -27,7 +27,8 @@ mvn archetype:generate                         \
   -Dudf-name=${functionName}  \
   -Dmethod-name=${methodName}      \
   -Dmethod-args=${methodArguments}   \
-  -Dreturn-type=${returnType}
+  -Dreturn-type=${returnType}    \
+  -Dteiid-version=${teiid-version}
 ----
 
 ********
@@ -60,7 +61,7 @@ mvn archetype:generate                         \
 mvn archetype:generate                           \
   -DarchetypeGroupId=org.teiid.arche-types               \
   -DarchetypeArtifactId=udf-archetype          \
-  -DarchetypeVersion=10.0.0     \
+  -DarchetypeVersion=12.0.0     \
   -DgroupId=org.example   \
   -DartifactId=udf-function    \
   -Dpackage=org.example.function    \
@@ -68,12 +69,13 @@ mvn archetype:generate                           \
   -Dudf-name=Function \
   -Dmethod-name=function      \
   -Dmethod-args='String arg1'   \
-  -Dreturn-type=String
+  -Dreturn-type=String  \
+  -Dteiid-version=12.0.0
 ----
 
 When executed, you will be asked to confirm the package property
 
-[INFO] Archetype repository not defined. Using the one from [org.teiid.arche-types:udf-archetype:10.0.0] found in catalog local
+[INFO] Archetype repository not defined. Using the one from [org.teiid.arche-types:udf-archetype:12.0.0] found in catalog local
 [INFO] Using property: groupId = org.example
 [INFO] Using property: artifactId = udf-function
 [INFO] Using property: version = 0.0.1-SNAPSHOT
@@ -82,6 +84,7 @@ When executed, you will be asked to confirm the package property
 [INFO] Using property: method-name = function
 [INFO] Using property: return-type = String
 [INFO] Using property: udf-name = Function
+[INFO] Using property: teiid-version = 12.0.0
 Confirm properties configuration:
 groupId: org.example
 artifactId: udf-function

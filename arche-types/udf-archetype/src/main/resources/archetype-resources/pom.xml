@@ -8,10 +8,30 @@
     <description>${udf-name} User Defined Function</description>
     <packaging>jar</packaging>
     <properties>
-
-    </properties>    
+        <version.org.teiid>${teiid-version}</version.org.teiid>
+    </properties>   
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.teiid</groupId>
+                <artifactId>teiid-bom</artifactId>
+                <version>${version.org.teiid}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>    
     <dependencies>
-
+        <dependency>
+            <groupId>org.teiid</groupId>
+            <artifactId>teiid-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.teiid</groupId>
+            <artifactId>teiid-common-core</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
