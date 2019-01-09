@@ -6,7 +6,7 @@
     <artifactId>teiid-tools</artifactId>
     <packaging>pom</packaging>
     <name>Teiid Tools</name>
-    <version>10.0.2-SNAPSHOT</version>
+    <version>12.0.0-SNAPSHOT</version>
 
     <description>Teiid tools to assist in development task.</description>
 	<properties>
