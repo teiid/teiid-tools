@@ -1,10 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-     <parent>
-        <groupId>org.teiid</groupId>
-        <artifactId>teiid-parent</artifactId>
-        <version>${teiid-version}</version>
-      </parent> 
       <modelVersion>4.0.0</modelVersion>
       <groupId>${groupId}</groupId>
       <artifactId>${artifactId}</artifactId>
@@ -18,6 +13,18 @@
         <version.org.teiid>${teiid-version}</version.org.teiid>
         <wildfly-module-root>modules</wildfly-module-root>
     </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.teiid.wildfly</groupId>
+                <artifactId>wildfly-parent</artifactId>
+                <version>${version.org.teiid}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>  
      
       <dependencies>
             <dependency>
@@ -26,7 +33,7 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
-                <groupId>org.teiid</groupId>
+                <groupId>org.teiid.wildfly</groupId>
                 <artifactId>teiid-resource-spi</artifactId>
                 <scope>provided</scope>
             </dependency>

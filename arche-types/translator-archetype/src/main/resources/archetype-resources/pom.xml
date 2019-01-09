@@ -15,7 +15,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.teiid</groupId>
-                <artifactId>teiid-bom</artifactId>
+                <artifactId>teiid-parent</artifactId>
                 <version>${version.org.teiid}</version>
                 <type>pom</type>
                 <scope>import</scope>
